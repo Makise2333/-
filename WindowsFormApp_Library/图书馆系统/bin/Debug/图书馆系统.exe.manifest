@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="图书馆系统.exe" size="309216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="图书馆系统.exe" size="240608">
       <assemblyIdentity name="图书馆系统" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TGFFjO4N8X+jjwWd1xSL0hYQSJp0XTEx1QiZx8y6G7U=</dsig:DigestValue>
+        <dsig:DigestValue>htRvYJza2vvvnOZwkjzAYlbYCNa1PupNEVOxOinrJe0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
