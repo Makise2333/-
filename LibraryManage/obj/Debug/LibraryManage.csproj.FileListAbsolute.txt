@@ -23,3 +23,16 @@ D:\QQ记录\2586963501\FileRecv\LibraryManage_jiejuefangan\LibraryManage\obj\Deb
 D:\QQ记录\2586963501\FileRecv\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
 D:\QQ记录\2586963501\FileRecv\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.exe
 D:\QQ记录\2586963501\FileRecv\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.pdb
+D:\it is my\Git\软件工程\Library-System\LibraryManage\bin\Debug\LibraryManage.exe.config
+D:\it is my\Git\软件工程\Library-System\LibraryManage\bin\Debug\LibraryManage.exe
+D:\it is my\Git\软件工程\Library-System\LibraryManage\bin\Debug\LibraryManage.pdb
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.csproj.AssemblyReference.cache
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.csproj.SuggestedBindingRedirects.cache
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.admin.resources
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.login.resources
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.Properties.Resources.resources
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.user.resources
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.csproj.GenerateResource.cache
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.exe
+D:\it is my\Git\软件工程\Library-System\LibraryManage\obj\Debug\LibraryManage.pdb
