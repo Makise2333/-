@@ -30,17 +30,17 @@ namespace LibraryManage
         private void InitializeComponent()
         {
             this.图书管理系统 = new System.Windows.Forms.Label();
-            this.登录按钮 = new System.Windows.Forms.Button();
-            this.注册按钮 = new System.Windows.Forms.Button();
+            this.denglubutton = new System.Windows.Forms.Button();
+            this.zhucebutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.状态 = new System.Windows.Forms.Label();
+            this.zhuangtai = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.注册 = new System.Windows.Forms.Button();
-            this.登录 = new System.Windows.Forms.Button();
+            this.zhuce = new System.Windows.Forms.Button();
+            this.denglu = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.用户名_text = new System.Windows.Forms.TextBox();
-            this.密码_text = new System.Windows.Forms.TextBox();
+            this.username_text = new System.Windows.Forms.TextBox();
+            this.password_text = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -60,40 +60,40 @@ namespace LibraryManage
             // 
             // 登录按钮
             // 
-            this.登录按钮.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.登录按钮.Location = new System.Drawing.Point(132, 0);
-            this.登录按钮.Name = "登录按钮";
-            this.登录按钮.Size = new System.Drawing.Size(57, 29);
-            this.登录按钮.TabIndex = 13;
-            this.登录按钮.Text = "登录";
-            this.登录按钮.UseVisualStyleBackColor = false;
-            this.登录按钮.Click += new System.EventHandler(this.登录按钮_Click);
+            this.denglubutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.denglubutton.Location = new System.Drawing.Point(132, 0);
+            this.denglubutton.Name = "登录按钮";
+            this.denglubutton.Size = new System.Drawing.Size(57, 29);
+            this.denglubutton.TabIndex = 13;
+            this.denglubutton.Text = "登录";
+            this.denglubutton.UseVisualStyleBackColor = false;
+            this.denglubutton.Click += new System.EventHandler(this.denglubutton_Click);
             // 
             // 注册按钮
             // 
-            this.注册按钮.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.注册按钮.Location = new System.Drawing.Point(185, 0);
-            this.注册按钮.Name = "注册按钮";
-            this.注册按钮.Size = new System.Drawing.Size(57, 29);
-            this.注册按钮.TabIndex = 14;
-            this.注册按钮.Text = "注册";
-            this.注册按钮.UseVisualStyleBackColor = false;
-            this.注册按钮.Click += new System.EventHandler(this.注册按钮_Click);
+            this.zhucebutton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.zhucebutton.Location = new System.Drawing.Point(185, 0);
+            this.zhucebutton.Name = "注册按钮";
+            this.zhucebutton.Size = new System.Drawing.Size(57, 29);
+            this.zhucebutton.TabIndex = 14;
+            this.zhucebutton.Text = "注册";
+            this.zhucebutton.UseVisualStyleBackColor = false;
+            this.zhucebutton.Click += new System.EventHandler(this.zhucebutton_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.状态);
+            this.groupBox2.Controls.Add(this.zhuangtai);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.注册);
-            this.groupBox2.Controls.Add(this.登录);
+            this.groupBox2.Controls.Add(this.zhuce);
+            this.groupBox2.Controls.Add(this.denglu);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.用户名_text);
-            this.groupBox2.Controls.Add(this.密码_text);
+            this.groupBox2.Controls.Add(this.username_text);
+            this.groupBox2.Controls.Add(this.password_text);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.登录按钮);
-            this.groupBox2.Controls.Add(this.注册按钮);
+            this.groupBox2.Controls.Add(this.denglubutton);
+            this.groupBox2.Controls.Add(this.zhucebutton);
             this.groupBox2.Location = new System.Drawing.Point(197, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(378, 302);
@@ -102,13 +102,13 @@ namespace LibraryManage
             // 
             // 状态
             // 
-            this.状态.AutoSize = true;
-            this.状态.Location = new System.Drawing.Point(7, 284);
-            this.状态.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.状态.Name = "状态";
-            this.状态.Size = new System.Drawing.Size(82, 15);
-            this.状态.TabIndex = 25;
-            this.状态.Text = "状态：登录";
+            this.zhuangtai.AutoSize = true;
+            this.zhuangtai.Location = new System.Drawing.Point(7, 284);
+            this.zhuangtai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.zhuangtai.Name = "状态";
+            this.zhuangtai.Size = new System.Drawing.Size(82, 15);
+            this.zhuangtai.TabIndex = 25;
+            this.zhuangtai.Text = "状态：登录";
             // 
             // label3
             // 
@@ -124,28 +124,28 @@ namespace LibraryManage
             // 
             // 注册
             // 
-            this.注册.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.注册.Location = new System.Drawing.Point(142, 220);
-            this.注册.Margin = new System.Windows.Forms.Padding(4);
-            this.注册.Name = "注册";
-            this.注册.Size = new System.Drawing.Size(100, 29);
-            this.注册.TabIndex = 23;
-            this.注册.Text = "注册";
-            this.注册.UseVisualStyleBackColor = true;
-            this.注册.Visible = false;
-            this.注册.Click += new System.EventHandler(this.注册_Click);
+            this.zhuce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.zhuce.Location = new System.Drawing.Point(142, 220);
+            this.zhuce.Margin = new System.Windows.Forms.Padding(4);
+            this.zhuce.Name = "注册";
+            this.zhuce.Size = new System.Drawing.Size(100, 29);
+            this.zhuce.TabIndex = 23;
+            this.zhuce.Text = "注册";
+            this.zhuce.UseVisualStyleBackColor = true;
+            this.zhuce.Visible = false;
+            this.zhuce.Click += new System.EventHandler(this.zhuce_Click);
             // 
             // 登录
             // 
-            this.登录.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.登录.Location = new System.Drawing.Point(142, 220);
-            this.登录.Margin = new System.Windows.Forms.Padding(4);
-            this.登录.Name = "登录";
-            this.登录.Size = new System.Drawing.Size(100, 29);
-            this.登录.TabIndex = 22;
-            this.登录.Text = "登录";
-            this.登录.UseVisualStyleBackColor = true;
-            this.登录.Click += new System.EventHandler(this.登录_Click);
+            this.denglu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.denglu.Location = new System.Drawing.Point(142, 220);
+            this.denglu.Margin = new System.Windows.Forms.Padding(4);
+            this.denglu.Name = "登录";
+            this.denglu.Size = new System.Drawing.Size(100, 29);
+            this.denglu.TabIndex = 22;
+            this.denglu.Text = "登录";
+            this.denglu.UseVisualStyleBackColor = true;
+            this.denglu.Click += new System.EventHandler(this.denglu_Click);
             // 
             // radioButton2
             // 
@@ -171,21 +171,21 @@ namespace LibraryManage
             // 
             // 用户名_text
             // 
-            this.用户名_text.Location = new System.Drawing.Point(132, 60);
-            this.用户名_text.Margin = new System.Windows.Forms.Padding(4);
-            this.用户名_text.Name = "用户名_text";
-            this.用户名_text.Size = new System.Drawing.Size(176, 25);
-            this.用户名_text.TabIndex = 15;
-            this.用户名_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.username_text.Location = new System.Drawing.Point(132, 60);
+            this.username_text.Margin = new System.Windows.Forms.Padding(4);
+            this.username_text.Name = "用户名_text";
+            this.username_text.Size = new System.Drawing.Size(176, 25);
+            this.username_text.TabIndex = 15;
+            this.username_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // 密码_text
             // 
-            this.密码_text.Location = new System.Drawing.Point(132, 109);
-            this.密码_text.Margin = new System.Windows.Forms.Padding(4);
-            this.密码_text.Name = "密码_text";
-            this.密码_text.Size = new System.Drawing.Size(176, 25);
-            this.密码_text.TabIndex = 16;
-            this.密码_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.password_text.Location = new System.Drawing.Point(132, 109);
+            this.password_text.Margin = new System.Windows.Forms.Padding(4);
+            this.password_text.Name = "密码_text";
+            this.password_text.Size = new System.Drawing.Size(176, 25);
+            this.password_text.TabIndex = 16;
+            this.password_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -228,19 +228,19 @@ namespace LibraryManage
         #endregion
 
         private System.Windows.Forms.Label 图书管理系统;
-        private System.Windows.Forms.Button 登录按钮;
-        private System.Windows.Forms.Button 注册按钮;
+        private System.Windows.Forms.Button denglubutton;
+        private System.Windows.Forms.Button zhucebutton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox 用户名_text;
-        private System.Windows.Forms.TextBox 密码_text;
+        private System.Windows.Forms.TextBox username_text;
+        private System.Windows.Forms.TextBox password_text;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button 注册;
-        private System.Windows.Forms.Button 登录;
+        private System.Windows.Forms.Button zhuce;
+        private System.Windows.Forms.Button denglu;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label 状态;
+        private System.Windows.Forms.Label zhuangtai;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

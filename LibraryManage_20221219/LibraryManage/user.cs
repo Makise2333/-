@@ -66,7 +66,7 @@ namespace LibraryManage
             string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
-            SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_书号.Text + "%' and name like '%" + textBox书名.Text + "%'order by id", conn);
+            SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_shuhao.Text + "%' and name like '%" + textBox_shuming.Text + "%'order by id", conn);
             DataSet ds = new DataSet();//创建一个临时数据库
             sqlDap.Fill(ds);
             DataTable _table = ds.Tables[0]; //将DataSet的第一张表赋值给DataTable。
@@ -113,12 +113,12 @@ namespace LibraryManage
                 string selectsql = "select number from book where id= " + bd + "";  //查看图书数量
                 SqlCommand cmd = new SqlCommand(selectsql, conn); 
                 object i = cmd.ExecuteScalar();    //返回结果的第一行第一列的值
-                textBox2辅助1.Text = i.ToString();    
-                num1 = int.Parse(textBox2辅助1.Text);  //num1为原始数量
+                textBox2_fuzhu1.Text = i.ToString();    
+                num1 = int.Parse(textBox2_fuzhu1.Text);  //num1为原始数量
                 int num2 = 0;
                 num1 = num1 - 1;  //借书后 数量减1
                 num2 = num1 + 1;   //原始数量
-                textBox3辅助.Text = Convert.ToString(num1);  //借出后数量
+                textBox3_fuzhu.Text = Convert.ToString(num1);  //借出后数量
 
                 if (num2 > 0)  //原始数量大于0
                 {
@@ -134,7 +134,7 @@ namespace LibraryManage
                     if (row21["id"] == null) return;//可以进行快速监视
                     string bd21 = Convert.ToString(row21["id"]);
                     //更新图书表
-                    string selectsql21 = "update book set number = " + textBox3辅助.Text + " where id = '" + bd21 + "'";
+                    string selectsql21 = "update book set number = " + textBox3_fuzhu.Text + " where id = '" + bd21 + "'";
                     SqlCommand cmd21 = new SqlCommand(selectsql21, conn21);
                     cmd21.CommandType = CommandType.Text;
                     SqlDataReader sdr21;
@@ -160,13 +160,13 @@ namespace LibraryManage
                     sdr12 = cmd12.ExecuteReader();
                     conn12.Close();
                     //更新完成显示
-                    MessageBox.Show("用户 " + label1user.Text + " 借阅成功,书号：" + bd + " 剩余数量：" + textBox3辅助.Text);
+                    MessageBox.Show("用户 " + label1user.Text + " 借阅成功,书号：" + bd + " 剩余数量：" + textBox3_fuzhu.Text);
 
                     //刷新图书目录
                     string str1 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
-                    SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_书号.Text + "%' and number like '%" + textBox书名.Text + "%'order by id", conn1);
+                    SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_shuhao.Text + "%' and number like '%" + textBox_shuming.Text + "%'order by id", conn1);
                     DataSet dds1 = new DataSet();
                     sqlDap.Fill(dds1);
                     DataTable _table1 = dds1.Tables[0];
@@ -199,7 +199,7 @@ namespace LibraryManage
             string str4 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn4 = new SqlConnection(str4);
             conn4.Open();
-            string selectsql4 = "Select * from borrow where username = '" + label2_user.Text + "' and id='" + textBox1书号.Text + "'";
+            string selectsql4 = "Select * from borrow where username = '" + label2_user.Text + "' and id='" + textBox1_shuhao.Text + "'";
             SqlCommand cmd4 = new SqlCommand(selectsql4, conn4);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
             cmd4.CommandType = CommandType.Text;
             SqlDataReader sdr4;
@@ -211,7 +211,7 @@ namespace LibraryManage
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 //还书数量加1
-                string selectsql = "update book set number = number+1 where id = '" + textBox1书号.Text + "'";
+                string selectsql = "update book set number = number+1 where id = '" + textBox1_shuhao.Text + "'";
                 SqlCommand cmd = new SqlCommand(selectsql, conn);
                 cmd.CommandType = CommandType.Text;
                 SqlDataReader sdr;
@@ -222,7 +222,7 @@ namespace LibraryManage
                 string str9 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn9 = new SqlConnection(str9);
                 conn9.Open();
-                string selectsql9 = "delete from borrow where id='" + textBox1书号.Text + "' and username='" + label2_user.Text + "'";
+                string selectsql9 = "delete from borrow where id='" + textBox1_shuhao.Text + "' and username='" + label2_user.Text + "'";
                 SqlCommand cmd9 = new SqlCommand(selectsql9, conn9);
                 cmd9.CommandType = CommandType.Text;
                 SqlDataReader sdr9;
@@ -234,14 +234,14 @@ namespace LibraryManage
                 SqlConnection conn7 = new SqlConnection(str7);
                 conn7.Open();
                 string usetime1 = DateTime.Now.ToString();
-                string selectsql7 = "insert into return_book values('" + label2_user.Text + "','" + textBox1书号.Text + "','" + usetime1 + "')";
+                string selectsql7 = "insert into return_book values('" + label2_user.Text + "','" + textBox1_shuhao.Text + "','" + usetime1 + "')";
                 SqlCommand cmd7 = new SqlCommand(selectsql7, conn7);
                 cmd7.CommandType = CommandType.Text;
                 SqlDataReader sdr7;
                 sdr7 = cmd7.ExecuteReader();
                 conn7.Close();
                 //还书信息展示
-                MessageBox.Show("用户：" + label2_user.Text + " 还书成功!书号：" + textBox1书号.Text, "还书信息", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("用户：" + label2_user.Text + " 还书成功!书号：" + textBox1_shuhao.Text, "还书信息", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 //刷新图书表
                 string str6 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";

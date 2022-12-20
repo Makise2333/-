@@ -31,12 +31,17 @@ namespace LibraryManage
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_showbook = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox3辅助 = new System.Windows.Forms.TextBox();
-            this.textBox2辅助1 = new System.Windows.Forms.TextBox();
+            this.textBox3_fuzhu = new System.Windows.Forms.TextBox();
+            this.textBox2_fuzhu1 = new System.Windows.Forms.TextBox();
             this.label1user = new System.Windows.Forms.Label();
-            this.textBox_书号 = new System.Windows.Forms.TextBox();
+            this.textBox_shuhao = new System.Windows.Forms.TextBox();
             this.dataGridView1_show = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,13 +52,13 @@ namespace LibraryManage
             this.button_select = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox书名 = new System.Windows.Forms.TextBox();
+            this.textBox_shuming = new System.Windows.Forms.TextBox();
             this.zs3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1书号 = new System.Windows.Forms.TextBox();
-            this.label书号 = new System.Windows.Forms.Label();
-            this.label用户名 = new System.Windows.Forms.Label();
+            this.textBox1_shuhao = new System.Windows.Forms.TextBox();
+            this.label_shuhao = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
             this.label2_user = new System.Windows.Forms.Label();
             this.button还书按钮 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -66,11 +71,6 @@ namespace LibraryManage
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_showbook)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -112,6 +112,46 @@ namespace LibraryManage
             this.dataGridView_showbook.Size = new System.Drawing.Size(836, 424);
             this.dataGridView_showbook.TabIndex = 6;
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "书号";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // bname
+            // 
+            this.bname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bname.DataPropertyName = "name";
+            this.bname.HeaderText = "书名";
+            this.bname.MinimumWidth = 6;
+            this.bname.Name = "bname";
+            // 
+            // bnum
+            // 
+            this.bnum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bnum.DataPropertyName = "number";
+            this.bnum.HeaderText = "数量";
+            this.bnum.MinimumWidth = 6;
+            this.bnum.Name = "bnum";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "author";
+            this.Column6.HeaderText = "作者";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "press";
+            this.Column10.HeaderText = "出版社";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -129,16 +169,16 @@ namespace LibraryManage
             // 
             this.tabPage2.BackColor = System.Drawing.Color.AliceBlue;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.textBox3辅助);
-            this.tabPage2.Controls.Add(this.textBox2辅助1);
+            this.tabPage2.Controls.Add(this.textBox3_fuzhu);
+            this.tabPage2.Controls.Add(this.textBox2_fuzhu1);
             this.tabPage2.Controls.Add(this.label1user);
-            this.tabPage2.Controls.Add(this.textBox_书号);
+            this.tabPage2.Controls.Add(this.textBox_shuhao);
             this.tabPage2.Controls.Add(this.dataGridView1_show);
             this.tabPage2.Controls.Add(this.button_borrow);
             this.tabPage2.Controls.Add(this.button_select);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textBox书名);
+            this.tabPage2.Controls.Add(this.textBox_shuming);
             this.tabPage2.Controls.Add(this.zs3);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -148,21 +188,21 @@ namespace LibraryManage
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "借书";
             // 
-            // textBox3辅助
+            // textBox3_fuzhu
             // 
-            this.textBox3辅助.Location = new System.Drawing.Point(486, 220);
-            this.textBox3辅助.Name = "textBox3辅助";
-            this.textBox3辅助.Size = new System.Drawing.Size(100, 25);
-            this.textBox3辅助.TabIndex = 27;
-            this.textBox3辅助.Visible = false;
+            this.textBox3_fuzhu.Location = new System.Drawing.Point(486, 220);
+            this.textBox3_fuzhu.Name = "textBox3_fuzhu";
+            this.textBox3_fuzhu.Size = new System.Drawing.Size(100, 25);
+            this.textBox3_fuzhu.TabIndex = 27;
+            this.textBox3_fuzhu.Visible = false;
             // 
-            // textBox2辅助1
+            // textBox2_fuzhu1
             // 
-            this.textBox2辅助1.Location = new System.Drawing.Point(486, 155);
-            this.textBox2辅助1.Name = "textBox2辅助1";
-            this.textBox2辅助1.Size = new System.Drawing.Size(100, 25);
-            this.textBox2辅助1.TabIndex = 26;
-            this.textBox2辅助1.Visible = false;
+            this.textBox2_fuzhu1.Location = new System.Drawing.Point(486, 155);
+            this.textBox2_fuzhu1.Name = "textBox2_fuzhu1";
+            this.textBox2_fuzhu1.Size = new System.Drawing.Size(100, 25);
+            this.textBox2_fuzhu1.TabIndex = 26;
+            this.textBox2_fuzhu1.Visible = false;
             // 
             // label1user
             // 
@@ -176,13 +216,13 @@ namespace LibraryManage
             this.label1user.Text = "label1";
             this.label1user.Visible = false;
             // 
-            // textBox_书号
+            // textBox_shuhao
             // 
-            this.textBox_书号.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold);
-            this.textBox_书号.Location = new System.Drawing.Point(141, 121);
-            this.textBox_书号.Name = "textBox_书号";
-            this.textBox_书号.Size = new System.Drawing.Size(164, 34);
-            this.textBox_书号.TabIndex = 24;
+            this.textBox_shuhao.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold);
+            this.textBox_shuhao.Location = new System.Drawing.Point(141, 121);
+            this.textBox_shuhao.Name = "textBox_shuhao";
+            this.textBox_shuhao.Size = new System.Drawing.Size(164, 34);
+            this.textBox_shuhao.TabIndex = 24;
             // 
             // dataGridView1_show
             // 
@@ -275,7 +315,7 @@ namespace LibraryManage
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(13, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 24);
+            this.label3.Size = new System.Drawing.Size(58, 23);
             this.label3.TabIndex = 19;
             this.label3.Text = "书名";
             this.label3.UseWaitCursor = true;
@@ -287,19 +327,19 @@ namespace LibraryManage
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(13, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 18;
             this.label2.Text = "书号";
             this.label2.UseWaitCursor = true;
             // 
-            // textBox书名
+            // textBox_shuming
             // 
-            this.textBox书名.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox书名.Location = new System.Drawing.Point(141, 209);
-            this.textBox书名.Name = "textBox书名";
-            this.textBox书名.Size = new System.Drawing.Size(164, 34);
-            this.textBox书名.TabIndex = 17;
-            this.textBox书名.UseWaitCursor = true;
+            this.textBox_shuming.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_shuming.Location = new System.Drawing.Point(141, 209);
+            this.textBox_shuming.Name = "textBox_shuming";
+            this.textBox_shuming.Size = new System.Drawing.Size(164, 34);
+            this.textBox_shuming.TabIndex = 17;
+            this.textBox_shuming.UseWaitCursor = true;
             // 
             // zs3
             // 
@@ -320,7 +360,7 @@ namespace LibraryManage
             this.label1.Location = new System.Drawing.Point(13, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(106, 23);
             this.label1.TabIndex = 9;
             this.label1.Text = "查询条件";
             this.label1.UseWaitCursor = true;
@@ -328,9 +368,9 @@ namespace LibraryManage
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage3.Controls.Add(this.textBox1书号);
-            this.tabPage3.Controls.Add(this.label书号);
-            this.tabPage3.Controls.Add(this.label用户名);
+            this.tabPage3.Controls.Add(this.textBox1_shuhao);
+            this.tabPage3.Controls.Add(this.label_shuhao);
+            this.tabPage3.Controls.Add(this.label_username);
             this.tabPage3.Controls.Add(this.label2_user);
             this.tabPage3.Controls.Add(this.button还书按钮);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
@@ -340,36 +380,36 @@ namespace LibraryManage
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "还书";
             // 
-            // textBox1书号
+            // textBox1_shuhao
             // 
-            this.textBox1书号.Location = new System.Drawing.Point(370, 147);
-            this.textBox1书号.Name = "textBox1书号";
-            this.textBox1书号.Size = new System.Drawing.Size(165, 25);
-            this.textBox1书号.TabIndex = 11;
-            this.textBox1书号.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1书号.UseWaitCursor = true;
+            this.textBox1_shuhao.Location = new System.Drawing.Point(370, 147);
+            this.textBox1_shuhao.Name = "textBox1_shuhao";
+            this.textBox1_shuhao.Size = new System.Drawing.Size(165, 25);
+            this.textBox1_shuhao.TabIndex = 11;
+            this.textBox1_shuhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1_shuhao.UseWaitCursor = true;
             // 
-            // label书号
+            // label_shuhao
             // 
-            this.label书号.AutoSize = true;
-            this.label书号.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label书号.Location = new System.Drawing.Point(249, 157);
-            this.label书号.Name = "label书号";
-            this.label书号.Size = new System.Drawing.Size(68, 15);
-            this.label书号.TabIndex = 10;
-            this.label书号.Text = "书  号：";
-            this.label书号.UseWaitCursor = true;
+            this.label_shuhao.AutoSize = true;
+            this.label_shuhao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_shuhao.Location = new System.Drawing.Point(249, 157);
+            this.label_shuhao.Name = "label_shuhao";
+            this.label_shuhao.Size = new System.Drawing.Size(68, 15);
+            this.label_shuhao.TabIndex = 10;
+            this.label_shuhao.Text = "书  号：";
+            this.label_shuhao.UseWaitCursor = true;
             // 
-            // label用户名
+            // label_username
             // 
-            this.label用户名.AutoSize = true;
-            this.label用户名.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label用户名.Location = new System.Drawing.Point(249, 77);
-            this.label用户名.Name = "label用户名";
-            this.label用户名.Size = new System.Drawing.Size(67, 15);
-            this.label用户名.TabIndex = 9;
-            this.label用户名.Text = "用户名：";
-            this.label用户名.UseWaitCursor = true;
+            this.label_username.AutoSize = true;
+            this.label_username.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_username.Location = new System.Drawing.Point(249, 77);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(67, 15);
+            this.label_username.TabIndex = 9;
+            this.label_username.Text = "用户名：";
+            this.label_username.UseWaitCursor = true;
             // 
             // label2_user
             // 
@@ -497,46 +537,6 @@ namespace LibraryManage
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "书号";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            // 
-            // bname
-            // 
-            this.bname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bname.DataPropertyName = "name";
-            this.bname.HeaderText = "书名";
-            this.bname.MinimumWidth = 6;
-            this.bname.Name = "bname";
-            // 
-            // bnum
-            // 
-            this.bnum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bnum.DataPropertyName = "number";
-            this.bnum.HeaderText = "数量";
-            this.bnum.MinimumWidth = 6;
-            this.bnum.Name = "bnum";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "author";
-            this.Column6.HeaderText = "作者";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "press";
-            this.Column10.HeaderText = "出版社";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
             // user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -572,7 +572,7 @@ namespace LibraryManage
         private System.Windows.Forms.Button button_select;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox书名;
+        private System.Windows.Forms.TextBox textBox_shuming;
         private System.Windows.Forms.Button zs3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
@@ -584,14 +584,14 @@ namespace LibraryManage
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.TextBox textBox_书号;
-        private System.Windows.Forms.TextBox textBox1书号;
-        private System.Windows.Forms.Label label书号;
-        private System.Windows.Forms.Label label用户名;
+        private System.Windows.Forms.TextBox textBox_shuhao;
+        private System.Windows.Forms.TextBox textBox1_shuhao;
+        private System.Windows.Forms.Label label_shuhao;
+        private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label2_user;
         private System.Windows.Forms.Button button还书按钮;
-        private System.Windows.Forms.TextBox textBox3辅助;
-        private System.Windows.Forms.TextBox textBox2辅助1;
+        private System.Windows.Forms.TextBox textBox3_fuzhu;
+        private System.Windows.Forms.TextBox textBox2_fuzhu1;
         private System.Windows.Forms.Label label1user;
         private System.Windows.Forms.DataGridView dataGridView_showreturn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

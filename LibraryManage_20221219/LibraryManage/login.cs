@@ -25,18 +25,18 @@ namespace LibraryManage
 
         private void login_Load(object sender, EventArgs e)
         {
-            密码_text.PasswordChar = '*'; //设置文本框的PasswordChar属性为字符@
-            密码_text.UseSystemPasswordChar = true;
-            登录按钮.BackColor = Color.LightSkyBlue;
-            注册按钮.BackColor = Color.White;
+            password_text.PasswordChar = '*'; //设置文本框的PasswordChar属性为字符@
+            password_text.UseSystemPasswordChar = true;
+            denglubutton.BackColor = Color.LightSkyBlue;
+            zhucebutton.BackColor = Color.White;
                      
         }
         public static string msg = "";   //用户名msg
         public static int dlflag = 2;   //学生是2  管理员是1
-        private void 登录_Click(object sender, EventArgs e)
+        private void denglu_Click(object sender, EventArgs e)
         {
             //登录
-            if (用户名_text.Text != "" && 密码_text.Text != "")  //只有用户名和密码都不为空才能登录
+            if (username_text.Text != "" && password_text.Text != "")  //只有用户名和密码都不为空才能登录
             {
 
                 if (radioButton1.Checked) dlflag = 1;   //管理员
@@ -49,7 +49,7 @@ namespace LibraryManage
                     SqlConnection conn = new SqlConnection(str);//实例化sql连接对象
                     conn.Open();//打开链接
                     //写sqlserver语句
-                    string selectsql = "Select * from login where username = '" + 用户名_text.Text + "' and password='" + 密码_text.Text + "'";
+                    string selectsql = "Select * from login where username = '" + username_text.Text + "' and password='" + password_text.Text + "'";
                     SqlCommand cmd = new SqlCommand(selectsql, conn);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                     cmd.CommandType = CommandType.Text;
                     //cmd执行的sql是赋给CommandText的值里写出的sql语句，
@@ -62,7 +62,7 @@ namespace LibraryManage
                     {
                         MessageBox.Show("登陆学生成功!");
                         //label3.Text = "登陆学生成功!";
-                        msg = 用户名_text.Text;  //跳转主界面
+                        msg = username_text.Text;  //跳转主界面
                         this.DialogResult = DialogResult.OK;//调用program中的函数方法 
                         this.Dispose(); //登陆成功显示主界面  
                         this.Close();   //关闭当前页面
@@ -70,7 +70,7 @@ namespace LibraryManage
                     else
                     {
                         label3.Text = "登陆学生失败!"; //label3在界面没有显示，因为设置了显示为一个空格，label控件用以显示提示登录信息
-                        密码_text.Text = "";
+                        password_text.Text = "";
 
                     }
                     conn.Close();//关闭对象
@@ -80,7 +80,7 @@ namespace LibraryManage
                     string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
-                    string selectsql = "Select * from loginad where username = '" + 用户名_text.Text + "' and password='" + 密码_text.Text + "'";
+                    string selectsql = "Select * from loginad where username = '" + username_text.Text + "' and password='" + password_text.Text + "'";
                     SqlCommand cmd = new SqlCommand(selectsql, conn);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                     cmd.CommandType = CommandType.Text;
                     SqlDataReader sdr;
@@ -89,7 +89,7 @@ namespace LibraryManage
                     {
                         MessageBox.Show("登陆管理员成功!");
                         //label3.Text = "登陆管理员成功!";
-                        msg = 用户名_text.Text;
+                        msg = username_text.Text;
                         this.DialogResult = DialogResult.Yes;
                         this.Dispose();
                         this.Close();
@@ -97,7 +97,7 @@ namespace LibraryManage
                     else
                     {
                         label3.Text = "登陆管理员失败!";
-                        密码_text.Text = "";
+                        password_text.Text = "";
                     }
                     conn.Close();
                 }
@@ -105,10 +105,10 @@ namespace LibraryManage
             else label3.Text = "用户名或密码为空!";
         }
 
-        private void 注册_Click(object sender, EventArgs e)
+        private void zhuce_Click(object sender, EventArgs e)
         {
 
-            if (用户名_text.Text != "" && 密码_text.Text != "")
+            if (username_text.Text != "" && password_text.Text != "")
             {
                 //注册
                 if (radioButton1.Checked) dlflag = 1;
@@ -119,7 +119,7 @@ namespace LibraryManage
                     string str2 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn2 = new SqlConnection(str2);//实例化cnn对象
                     conn2.Open();//打开
-                    string selectsql2 = "Select * from login where username = '" + 用户名_text.Text + "'";
+                    string selectsql2 = "Select * from login where username = '" + username_text.Text + "'";
                     SqlCommand cmd2 = new SqlCommand(selectsql2, conn2);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                     cmd2.CommandType = CommandType.Text;
                     SqlDataReader sdr2;//声明对象 
@@ -134,7 +134,7 @@ namespace LibraryManage
                         SqlConnection conn = new SqlConnection(str);
                         conn.Open();
                         //插入操作
-                        string selectsql = "insert into login values('" + 用户名_text.Text + "','" + 密码_text.Text + "')";
+                        string selectsql = "insert into login values('" + username_text.Text + "','" + password_text.Text + "')";
                         SqlCommand cmd = new SqlCommand(selectsql, conn);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                         cmd.CommandType = CommandType.Text;
                         SqlDataReader sdr;
@@ -150,7 +150,7 @@ namespace LibraryManage
                     string str3 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn3 = new SqlConnection(str3);
                     conn3.Open();
-                    string selectsql3 = "Select * from loginad where username = '" + 用户名_text.Text + "'";
+                    string selectsql3 = "Select * from loginad where username = '" + username_text.Text + "'";
                     SqlCommand cmd3 = new SqlCommand(selectsql3, conn3);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                     cmd3.CommandType = CommandType.Text;
                     SqlDataReader sdr3;
@@ -164,7 +164,7 @@ namespace LibraryManage
                         string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
                         SqlConnection conn = new SqlConnection(str);
                         conn.Open();
-                        string selectsql = "insert into loginad values('" + 用户名_text.Text + "','" + 密码_text.Text + "')";
+                        string selectsql = "insert into loginad values('" + username_text.Text + "','" + password_text.Text + "')";
                         SqlCommand cmd = new SqlCommand(selectsql, conn);//SqlCommand对象允许你指定在数据库上执行的操作的类型。
                         cmd.CommandType = CommandType.Text;
                         SqlDataReader sdr;
@@ -178,23 +178,23 @@ namespace LibraryManage
             }
             else label3.Text = "用户名或密码为空！";
         }
-        private void 登录按钮_Click(object sender, EventArgs e)
+        private void denglubutton_Click(object sender, EventArgs e)
         {
             //切换登录状态
-            登录.Visible = true;
-            注册.Visible = false;
-            状态.Text = "状态：登录";
-            登录按钮.BackColor = Color.LightSkyBlue;
-            注册按钮.BackColor = Color.White;
+            denglu.Visible = true;
+            zhuce.Visible = false;
+            zhuangtai.Text = "状态：登录";
+            denglubutton.BackColor = Color.LightSkyBlue;
+            zhucebutton.BackColor = Color.White;
         }
-        private void 注册按钮_Click(object sender, EventArgs e)
+        private void zhucebutton_Click(object sender, EventArgs e)
         {
             //切换注册状态
-            注册.Visible = true;
-            登录.Visible = false;
-            状态.Text = "状态：注册";
-            注册按钮.BackColor = Color.LightSkyBlue;
-            登录按钮.BackColor = Color.White;
+            zhuce.Visible = true;
+            denglu.Visible = false;
+            zhuangtai.Text = "状态：注册";
+            zhucebutton.BackColor = Color.LightSkyBlue;
+            denglubutton.BackColor = Color.White;
         }
 
     }
