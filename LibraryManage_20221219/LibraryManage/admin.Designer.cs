@@ -29,9 +29,9 @@ namespace LibraryManage
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6_bookmanage = new System.Windows.Forms.Button();
+            this.button_lendManage = new System.Windows.Forms.Button();
+            this.button_UserManage = new System.Windows.Forms.Button();
+            this.button_BookManage = new System.Windows.Forms.Button();
             this.tushuguanli = new System.Windows.Forms.GroupBox();
             this.图书夹 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -63,12 +63,61 @@ namespace LibraryManage
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tushuyilan = new System.Windows.Forms.GroupBox();
             this.dataGridView_showbook = new System.Windows.Forms.DataGridView();
-            this.button_show = new System.Windows.Forms.Button();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Show = new System.Windows.Forms.Button();
+            this.jieyueguanli = new System.Windows.Forms.GroupBox();
+            this.select_borrow = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.select_retern = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duzheguanli = new System.Windows.Forms.GroupBox();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox_Add = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button_back = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button_Add = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox11_usename = new System.Windows.Forms.TextBox();
+            this.button5_select = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.读者信息修改 = new System.Windows.Forms.Label();
+            this.alter_email = new System.Windows.Forms.Button();
+            this.alter_age = new System.Windows.Forms.Button();
+            this.alter_sex = new System.Windows.Forms.Button();
+            this.alter_pssword = new System.Windows.Forms.Button();
+            this.textBox5_Email = new System.Windows.Forms.TextBox();
+            this.textBox4_age = new System.Windows.Forms.TextBox();
+            this.textBox3_sex = new System.Windows.Forms.TextBox();
+            this.textBox2_password = new System.Windows.Forms.TextBox();
+            this.textBox1_username = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.tushuguanli.SuspendLayout();
             this.图书夹.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -77,35 +126,45 @@ namespace LibraryManage
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).BeginInit();
             this.tushuyilan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_showbook)).BeginInit();
+            this.jieyueguanli.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.duzheguanli.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.groupBox_Add.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // button_lendManage
             // 
-            this.button5.Location = new System.Drawing.Point(12, 74);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(194, 66);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "借阅管理";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_lendManage.Location = new System.Drawing.Point(12, 74);
+            this.button_lendManage.Name = "button_lendManage";
+            this.button_lendManage.Size = new System.Drawing.Size(194, 66);
+            this.button_lendManage.TabIndex = 5;
+            this.button_lendManage.Text = "借阅管理";
+            this.button_lendManage.UseVisualStyleBackColor = true;
+            this.button_lendManage.Click += new System.EventHandler(this.button_LendManage);
             // 
-            // button2
+            // button_UserManage
             // 
-            this.button2.Location = new System.Drawing.Point(12, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 66);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "读者管理";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_UserManage.Location = new System.Drawing.Point(12, 198);
+            this.button_UserManage.Name = "button_UserManage";
+            this.button_UserManage.Size = new System.Drawing.Size(194, 66);
+            this.button_UserManage.TabIndex = 6;
+            this.button_UserManage.Text = "读者管理";
+            this.button_UserManage.UseVisualStyleBackColor = true;
+            this.button_UserManage.Click += new System.EventHandler(this.button_UserManage_Click);
             // 
-            // button6_bookmanage
+            // button_BookManage
             // 
-            this.button6_bookmanage.Location = new System.Drawing.Point(12, 136);
-            this.button6_bookmanage.Name = "button6_bookmanage";
-            this.button6_bookmanage.Size = new System.Drawing.Size(194, 66);
-            this.button6_bookmanage.TabIndex = 18;
-            this.button6_bookmanage.Text = "图书管理";
-            this.button6_bookmanage.UseVisualStyleBackColor = true;
-            this.button6_bookmanage.Click += new System.EventHandler(this.button6_bookmanage_Click);
+            this.button_BookManage.Location = new System.Drawing.Point(12, 136);
+            this.button_BookManage.Name = "button_BookManage";
+            this.button_BookManage.Size = new System.Drawing.Size(194, 66);
+            this.button_BookManage.TabIndex = 18;
+            this.button_BookManage.Text = "图书管理";
+            this.button_BookManage.UseVisualStyleBackColor = true;
+            this.button_BookManage.Click += new System.EventHandler(this.button_BookManage_Click);
             // 
             // tushuguanli
             // 
@@ -141,7 +200,7 @@ namespace LibraryManage
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(696, 342);
+            this.tabPage1.Size = new System.Drawing.Size(681, 376);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "图书入库";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -229,7 +288,7 @@ namespace LibraryManage
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(696, 342);
+            this.tabPage2.Size = new System.Drawing.Size(681, 376);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "图书修改";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -420,7 +479,7 @@ namespace LibraryManage
             this.tushuyilan.Controls.Add(this.dataGridView_showbook);
             this.tushuyilan.Location = new System.Drawing.Point(212, 3);
             this.tushuyilan.Name = "tushuyilan";
-            this.tushuyilan.Size = new System.Drawing.Size(711, 429);
+            this.tushuyilan.Size = new System.Drawing.Size(703, 422);
             this.tushuyilan.TabIndex = 20;
             this.tushuyilan.TabStop = false;
             // 
@@ -437,18 +496,8 @@ namespace LibraryManage
             this.dataGridView_showbook.Name = "dataGridView_showbook";
             this.dataGridView_showbook.RowHeadersWidth = 51;
             this.dataGridView_showbook.RowTemplate.Height = 27;
-            this.dataGridView_showbook.Size = new System.Drawing.Size(681, 382);
+            this.dataGridView_showbook.Size = new System.Drawing.Size(685, 397);
             this.dataGridView_showbook.TabIndex = 0;
-            // 
-            // button_show
-            // 
-            this.button_show.Location = new System.Drawing.Point(12, 12);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(194, 66);
-            this.button_show.TabIndex = 20;
-            this.button_show.Text = "图书一览";
-            this.button_show.UseVisualStyleBackColor = true;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
             // 
             // Column10
             // 
@@ -490,18 +539,515 @@ namespace LibraryManage
             this.Column6.Name = "Column6";
             this.Column6.Width = 135;
             // 
+            // button_Show
+            // 
+            this.button_Show.Location = new System.Drawing.Point(12, 12);
+            this.button_Show.Name = "button_Show";
+            this.button_Show.Size = new System.Drawing.Size(194, 66);
+            this.button_Show.TabIndex = 20;
+            this.button_Show.Text = "图书一览";
+            this.button_Show.UseVisualStyleBackColor = true;
+            this.button_Show.Click += new System.EventHandler(this.button_Show_Click);
+            // 
+            // jieyueguanli
+            // 
+            this.jieyueguanli.Controls.Add(this.select_borrow);
+            this.jieyueguanli.Controls.Add(this.label19);
+            this.jieyueguanli.Controls.Add(this.label20);
+            this.jieyueguanli.Controls.Add(this.textBox4);
+            this.jieyueguanli.Controls.Add(this.textBox5);
+            this.jieyueguanli.Controls.Add(this.label21);
+            this.jieyueguanli.Controls.Add(this.select_retern);
+            this.jieyueguanli.Controls.Add(this.textBox6);
+            this.jieyueguanli.Controls.Add(this.dataGridView3);
+            this.jieyueguanli.Location = new System.Drawing.Point(212, 12);
+            this.jieyueguanli.Name = "jieyueguanli";
+            this.jieyueguanli.Size = new System.Drawing.Size(722, 413);
+            this.jieyueguanli.TabIndex = 21;
+            this.jieyueguanli.TabStop = false;
+            // 
+            // select_borrow
+            // 
+            this.select_borrow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.select_borrow.Location = new System.Drawing.Point(606, 49);
+            this.select_borrow.Name = "select_borrow";
+            this.select_borrow.Size = new System.Drawing.Size(109, 38);
+            this.select_borrow.TabIndex = 39;
+            this.select_borrow.Text = "借书查询";
+            this.select_borrow.UseVisualStyleBackColor = true;
+            this.select_borrow.Click += new System.EventHandler(this.select_borrow_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label19.Location = new System.Drawing.Point(327, 26);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(272, 15);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "按时间查询：（2022/5/22 10:22:04 )";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label20.Location = new System.Drawing.Point(171, 26);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 15);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "书号:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(330, 49);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(270, 25);
+            this.textBox4.TabIndex = 34;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(174, 49);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(150, 25);
+            this.textBox5.TabIndex = 33;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(14, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(60, 15);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "用户名:";
+            // 
+            // select_retern
+            // 
+            this.select_retern.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.select_retern.Location = new System.Drawing.Point(606, 14);
+            this.select_retern.Name = "select_retern";
+            this.select_retern.Size = new System.Drawing.Size(109, 38);
+            this.select_retern.TabIndex = 35;
+            this.select_retern.Text = "还书查询";
+            this.select_retern.UseVisualStyleBackColor = true;
+            this.select_retern.Click += new System.EventHandler(this.select_retern_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(13, 49);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(154, 25);
+            this.textBox6.TabIndex = 32;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.dataGridView3.Location = new System.Drawing.Point(6, 93);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 27;
+            this.dataGridView3.Size = new System.Drawing.Size(709, 313);
+            this.dataGridView3.TabIndex = 22;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "username";
+            this.dataGridViewTextBoxColumn13.HeaderText = "用户名";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "书号";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "time";
+            this.dataGridViewTextBoxColumn15.HeaderText = "时间";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // duzheguanli
+            // 
+            this.duzheguanli.Controls.Add(this.tabControl2);
+            this.duzheguanli.Location = new System.Drawing.Point(212, 3);
+            this.duzheguanli.Name = "duzheguanli";
+            this.duzheguanli.Size = new System.Drawing.Size(751, 440);
+            this.duzheguanli.TabIndex = 22;
+            this.duzheguanli.TabStop = false;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Location = new System.Drawing.Point(6, 14);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(739, 410);
+            this.tabControl2.TabIndex = 1;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.groupBox_Add);
+            this.tabPage7.Controls.Add(this.button_Add);
+            this.tabPage7.Controls.Add(this.label12);
+            this.tabPage7.Controls.Add(this.textBox11_usename);
+            this.tabPage7.Controls.Add(this.button5_select);
+            this.tabPage7.Controls.Add(this.dataGridView1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(731, 381);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "读者信息";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_Add
+            // 
+            this.groupBox_Add.Controls.Add(this.label26);
+            this.groupBox_Add.Controls.Add(this.label25);
+            this.groupBox_Add.Controls.Add(this.button_back);
+            this.groupBox_Add.Controls.Add(this.Add);
+            this.groupBox_Add.Controls.Add(this.textBox22);
+            this.groupBox_Add.Controls.Add(this.textBox11);
+            this.groupBox_Add.Location = new System.Drawing.Point(209, 89);
+            this.groupBox_Add.Name = "groupBox_Add";
+            this.groupBox_Add.Size = new System.Drawing.Size(259, 259);
+            this.groupBox_Add.TabIndex = 12;
+            this.groupBox_Add.TabStop = false;
+            this.groupBox_Add.Text = "添加用户";
+            this.groupBox_Add.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(19, 128);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(37, 15);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "密码";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(19, 34);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 15);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "用户名";
+            // 
+            // button_back
+            // 
+            this.button_back.Location = new System.Drawing.Point(128, 204);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(101, 40);
+            this.button_back.TabIndex = 3;
+            this.button_back.Text = "返回";
+            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(9, 204);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(101, 40);
+            this.Add.TabIndex = 2;
+            this.Add.Text = "添加用户";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(53, 158);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(139, 25);
+            this.textBox22.TabIndex = 1;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(53, 63);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(139, 25);
+            this.textBox11.TabIndex = 0;
+            // 
+            // button_Add
+            // 
+            this.button_Add.Location = new System.Drawing.Point(616, 7);
+            this.button_Add.Name = "button_Add";
+            this.button_Add.Size = new System.Drawing.Size(94, 38);
+            this.button_Add.TabIndex = 11;
+            this.button_Add.Text = "添加";
+            this.button_Add.UseVisualStyleBackColor = true;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(25, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 15);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "用户名:";
+            // 
+            // textBox11_usename
+            // 
+            this.textBox11_usename.Location = new System.Drawing.Point(109, 15);
+            this.textBox11_usename.Name = "textBox11_usename";
+            this.textBox11_usename.Size = new System.Drawing.Size(181, 25);
+            this.textBox11_usename.TabIndex = 7;
+            this.textBox11_usename.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button5_select
+            // 
+            this.button5_select.Location = new System.Drawing.Point(490, 7);
+            this.button5_select.Name = "button5_select";
+            this.button5_select.Size = new System.Drawing.Size(99, 38);
+            this.button5_select.TabIndex = 1;
+            this.button5_select.Text = "查询";
+            this.button5_select.UseVisualStyleBackColor = true;
+            this.button5_select.Click += new System.EventHandler(this.button5_select_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(709, 325);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "username";
+            this.dataGridViewTextBoxColumn8.HeaderText = "用户名";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "password";
+            this.dataGridViewTextBoxColumn9.HeaderText = "密码";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "age";
+            this.dataGridViewTextBoxColumn10.HeaderText = "年龄";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "sex";
+            this.dataGridViewTextBoxColumn11.HeaderText = "性别";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.读者信息修改);
+            this.tabPage8.Controls.Add(this.alter_email);
+            this.tabPage8.Controls.Add(this.alter_age);
+            this.tabPage8.Controls.Add(this.alter_sex);
+            this.tabPage8.Controls.Add(this.alter_pssword);
+            this.tabPage8.Controls.Add(this.textBox5_Email);
+            this.tabPage8.Controls.Add(this.textBox4_age);
+            this.tabPage8.Controls.Add(this.textBox3_sex);
+            this.tabPage8.Controls.Add(this.textBox2_password);
+            this.tabPage8.Controls.Add(this.textBox1_username);
+            this.tabPage8.Controls.Add(this.label14);
+            this.tabPage8.Controls.Add(this.label15);
+            this.tabPage8.Controls.Add(this.label16);
+            this.tabPage8.Controls.Add(this.label17);
+            this.tabPage8.Controls.Add(this.label18);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(731, 381);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "管理信息";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // 读者信息修改
+            // 
+            this.读者信息修改.AutoSize = true;
+            this.读者信息修改.Font = new System.Drawing.Font("楷体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.读者信息修改.Location = new System.Drawing.Point(287, 33);
+            this.读者信息修改.Name = "读者信息修改";
+            this.读者信息修改.Size = new System.Drawing.Size(160, 24);
+            this.读者信息修改.TabIndex = 14;
+            this.读者信息修改.Text = "读者信息修改";
+            // 
+            // alter_email
+            // 
+            this.alter_email.Location = new System.Drawing.Point(474, 262);
+            this.alter_email.Name = "alter_email";
+            this.alter_email.Size = new System.Drawing.Size(75, 31);
+            this.alter_email.TabIndex = 13;
+            this.alter_email.Text = "修改";
+            this.alter_email.UseVisualStyleBackColor = true;
+            this.alter_email.Click += new System.EventHandler(this.alter_email_Click);
+            // 
+            // alter_age
+            // 
+            this.alter_age.Location = new System.Drawing.Point(474, 216);
+            this.alter_age.Name = "alter_age";
+            this.alter_age.Size = new System.Drawing.Size(75, 33);
+            this.alter_age.TabIndex = 12;
+            this.alter_age.Text = "修改";
+            this.alter_age.UseVisualStyleBackColor = true;
+            this.alter_age.Click += new System.EventHandler(this.alter_age_Click);
+            // 
+            // alter_sex
+            // 
+            this.alter_sex.Location = new System.Drawing.Point(474, 171);
+            this.alter_sex.Name = "alter_sex";
+            this.alter_sex.Size = new System.Drawing.Size(75, 33);
+            this.alter_sex.TabIndex = 11;
+            this.alter_sex.Text = "修改";
+            this.alter_sex.UseVisualStyleBackColor = true;
+            this.alter_sex.Click += new System.EventHandler(this.alter_sex_Click);
+            // 
+            // alter_pssword
+            // 
+            this.alter_pssword.Location = new System.Drawing.Point(474, 130);
+            this.alter_pssword.Name = "alter_pssword";
+            this.alter_pssword.Size = new System.Drawing.Size(75, 33);
+            this.alter_pssword.TabIndex = 10;
+            this.alter_pssword.Text = "修改";
+            this.alter_pssword.UseVisualStyleBackColor = true;
+            this.alter_pssword.Click += new System.EventHandler(this.alter_pssword_Click);
+            // 
+            // textBox5_Email
+            // 
+            this.textBox5_Email.Location = new System.Drawing.Point(262, 268);
+            this.textBox5_Email.Name = "textBox5_Email";
+            this.textBox5_Email.Size = new System.Drawing.Size(161, 25);
+            this.textBox5_Email.TabIndex = 9;
+            this.textBox5_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4_age
+            // 
+            this.textBox4_age.Location = new System.Drawing.Point(262, 225);
+            this.textBox4_age.Name = "textBox4_age";
+            this.textBox4_age.Size = new System.Drawing.Size(161, 25);
+            this.textBox4_age.TabIndex = 8;
+            this.textBox4_age.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3_sex
+            // 
+            this.textBox3_sex.Location = new System.Drawing.Point(262, 179);
+            this.textBox3_sex.Name = "textBox3_sex";
+            this.textBox3_sex.Size = new System.Drawing.Size(161, 25);
+            this.textBox3_sex.TabIndex = 7;
+            this.textBox3_sex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2_password
+            // 
+            this.textBox2_password.Location = new System.Drawing.Point(262, 136);
+            this.textBox2_password.Name = "textBox2_password";
+            this.textBox2_password.Size = new System.Drawing.Size(161, 25);
+            this.textBox2_password.TabIndex = 6;
+            this.textBox2_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_username
+            // 
+            this.textBox1_username.Location = new System.Drawing.Point(262, 93);
+            this.textBox1_username.Name = "textBox1_username";
+            this.textBox1_username.Size = new System.Drawing.Size(161, 25);
+            this.textBox1_username.TabIndex = 5;
+            this.textBox1_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(169, 271);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Email：";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(169, 225);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "年龄：";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(169, 179);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "性别：";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(169, 136);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 15);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "密码：";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(169, 93);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 15);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "用户名*：";
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(913, 413);
+            this.ClientSize = new System.Drawing.Size(960, 435);
+            this.Controls.Add(this.duzheguanli);
+            this.Controls.Add(this.jieyueguanli);
             this.Controls.Add(this.tushuyilan);
-            this.Controls.Add(this.button_show);
+            this.Controls.Add(this.button_Show);
             this.Controls.Add(this.tushuguanli);
-            this.Controls.Add(this.button6_bookmanage);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button_BookManage);
+            this.Controls.Add(this.button_UserManage);
+            this.Controls.Add(this.button_lendManage);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "admin";
@@ -518,14 +1064,26 @@ namespace LibraryManage
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).EndInit();
             this.tushuyilan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_showbook)).EndInit();
+            this.jieyueguanli.ResumeLayout(false);
+            this.jieyueguanli.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.duzheguanli.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.groupBox_Add.ResumeLayout(false);
+            this.groupBox_Add.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6_bookmanage;
+        private System.Windows.Forms.Button button_lendManage;
+        private System.Windows.Forms.Button button_UserManage;
+        private System.Windows.Forms.Button button_BookManage;
         private System.Windows.Forms.GroupBox tushuguanli;
         private System.Windows.Forms.TabControl 图书夹;
         private System.Windows.Forms.TabPage tabPage1;
@@ -557,11 +1115,60 @@ namespace LibraryManage
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox tushuyilan;
         private System.Windows.Forms.DataGridView dataGridView_showbook;
-        private System.Windows.Forms.Button button_show;
+        private System.Windows.Forms.Button button_Show;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.GroupBox jieyueguanli;
+        private System.Windows.Forms.Button select_borrow;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button select_retern;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.GroupBox duzheguanli;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.GroupBox groupBox_Add;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button_Add;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox11_usename;
+        private System.Windows.Forms.Button button5_select;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label 读者信息修改;
+        private System.Windows.Forms.Button alter_email;
+        private System.Windows.Forms.Button alter_age;
+        private System.Windows.Forms.Button alter_sex;
+        private System.Windows.Forms.Button alter_pssword;
+        private System.Windows.Forms.TextBox textBox5_Email;
+        private System.Windows.Forms.TextBox textBox4_age;
+        private System.Windows.Forms.TextBox textBox3_sex;
+        private System.Windows.Forms.TextBox textBox2_password;
+        private System.Windows.Forms.TextBox textBox1_username;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }
