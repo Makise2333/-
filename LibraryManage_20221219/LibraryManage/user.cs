@@ -24,7 +24,7 @@ namespace LibraryManage
             label1user.Text = LibraryManage.login.msg;
             label2_user.Text = LibraryManage.login.msg;
             //图书目录展示
-            string str1515 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str1515 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1515 = new SqlConnection(str1515);
             conn1515.Open();
             SqlDataAdapter sqlDap1515 = new SqlDataAdapter("Select * from book order by id", conn1515);
@@ -36,7 +36,7 @@ namespace LibraryManage
             conn1515.Close();
 
             //借书记录展示
-            string str152 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str152 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn152 = new SqlConnection(str152);
             conn152.Open();
             SqlDataAdapter sqlDap31 = new SqlDataAdapter("Select * from borrow where username = '" + label1user.Text + "' order by username", conn152);
@@ -48,7 +48,7 @@ namespace LibraryManage
             conn152.Close();
 
             //还书记录展示
-            string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
             SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from return_book where username = '" + label1user.Text + "' order by username", conn);
@@ -63,7 +63,7 @@ namespace LibraryManage
         private void button_select_Click(object sender, EventArgs e)
         {
             //连接数据库
-            string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
             SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_shuhao.Text + "%' and name like '%" + textBox_shuming.Text + "%'order by id", conn);
@@ -77,7 +77,7 @@ namespace LibraryManage
         private void button_borrow_Click(object sender, EventArgs e)
         {
             //连接数据库 取得数据
-            string str4 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str4 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn2 = new SqlConnection(str4);
             conn2.Open();
             if (dataGridView1_show.SelectedRows.Count != 1) return;
@@ -101,7 +101,7 @@ namespace LibraryManage
             {
                 num1 = 0;
                 //取得数据
-                string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 if (dataGridView1_show.SelectedRows.Count != 1) return;   //查看是否选中至少1行
@@ -124,7 +124,7 @@ namespace LibraryManage
                 {
                     conn.Close();
                     //查询数量完成 开始借书
-                    string str21 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str21 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn21 = new SqlConnection(str21);
                     conn21.Open();
                     if (dataGridView1_show.SelectedRows.Count != 1) return;
@@ -142,7 +142,7 @@ namespace LibraryManage
                     conn.Close();//完成book更新
 
                     //写借书信息表
-                    string str12 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str12 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn12 = new SqlConnection(str12);
                     conn12.Open();
                     if (dataGridView1_show.SelectedRows.Count != 1) return;
@@ -163,7 +163,7 @@ namespace LibraryManage
                     MessageBox.Show("用户 " + label1user.Text + " 借阅成功,书号：" + bd + " 剩余数量：" + textBox3_fuzhu.Text);
 
                     //刷新图书目录
-                    string str1 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
                     SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book where id like '%" + textBox_shuhao.Text + "%' and number like '%" + textBox_shuming.Text + "%'order by id", conn1);
@@ -176,7 +176,7 @@ namespace LibraryManage
                     conn1.Close();
 
                     //刷新借书信息目录
-                    string str151 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str151 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn151 = new SqlConnection(str151);
                     conn151.Open();
                     SqlDataAdapter sqlDap31 = new SqlDataAdapter("Select * from borrow where username = '" + label1user.Text + "' order by username", conn151);
@@ -196,7 +196,7 @@ namespace LibraryManage
         private void button还书按钮_Click(object sender, EventArgs e)
         {
             //查询借书信息
-            string str4 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+            string str4 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn4 = new SqlConnection(str4);
             conn4.Open();
             string selectsql4 = "Select * from borrow where username = '" + label2_user.Text + "' and id='" + textBox1_shuhao.Text + "'";
@@ -207,7 +207,7 @@ namespace LibraryManage
 
             if (sdr4.Read())  //查询到借书信息
             {
-                string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 //还书数量加1
@@ -219,7 +219,7 @@ namespace LibraryManage
                 conn.Close();
 
                 //删除借阅信息
-                string str9 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str9 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn9 = new SqlConnection(str9);
                 conn9.Open();
                 string selectsql9 = "delete from borrow where id='" + textBox1_shuhao.Text + "' and username='" + label2_user.Text + "'";
@@ -230,7 +230,7 @@ namespace LibraryManage
                 conn9.Close();
 
                 //写还书记录
-                string str7 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str7 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn7 = new SqlConnection(str7);
                 conn7.Open();
                 string usetime1 = DateTime.Now.ToString();
@@ -244,7 +244,7 @@ namespace LibraryManage
                 MessageBox.Show("用户：" + label2_user.Text + " 还书成功!书号：" + textBox1_shuhao.Text, "还书信息", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 //刷新图书表
-                string str6 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str6 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn6 = new SqlConnection(str6);
                 conn6.Open();
                 SqlDataAdapter sqlDap6 = new SqlDataAdapter("Select * from book order by id", conn6);
@@ -257,7 +257,7 @@ namespace LibraryManage
                 conn6.Close();
 
                 //更新借阅表展示界面
-                string str15 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str15 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn15 = new SqlConnection(str15);
                 conn15.Open();
                 SqlDataAdapter sqlDap3 = new SqlDataAdapter("Select * from borrow where username = '" + label1user.Text + "' order by username", conn15);
@@ -269,7 +269,7 @@ namespace LibraryManage
                 conn15.Close();
 
                 //更新还书表展示界面
-                string str1523 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                string str1523 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn1523 = new SqlConnection(str1523);
                 conn1523.Open();
                 SqlDataAdapter sqlDap323 = new SqlDataAdapter("Select * from return_book where username = '" + label1user.Text + "' order by username", conn1523);
