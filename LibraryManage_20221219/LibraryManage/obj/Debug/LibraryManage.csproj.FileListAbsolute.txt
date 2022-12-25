@@ -23,3 +23,15 @@ C:\Users\LENOVO\Desktop\LibraryManage_jiejuefangan1\LibraryManage_jiejuefangan\L
 C:\Users\LENOVO\Desktop\LibraryManage_jiejuefangan1\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\LibraryManage_jiejuefangan1\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.exe
 C:\Users\LENOVO\Desktop\LibraryManage_jiejuefangan1\LibraryManage_jiejuefangan\LibraryManage\obj\Debug\LibraryManage.pdb
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe.config
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.pdb
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.AssemblyReference.cache
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.admin.resources
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.login.resources
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.Properties.Resources.resources
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.user.resources
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.GenerateResource.cache
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.exe
+D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.pdb

@@ -16,7 +16,7 @@ namespace LibraryManage
         public login()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"F:\课程\软件工程\LibraryManage_jiejuefangan\安徽财经大学图书馆背景照.jpg");//文件路径
+            this.BackgroundImage = Image.FromFile(@"D:\86137\Library-System\LibraryManage_20221219\安徽财经大学图书馆背景照.jpg");//文件路径
             this.BackgroundImageLayout = ImageLayout.Stretch;//自动延展
 
             //this.WindowState = FormWindowState.Minimized;
@@ -45,7 +45,7 @@ namespace LibraryManage
                 if (dlflag == 2) //学生登录
                 {
                     //数据库连接字符串
-                    string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);//实例化sql连接对象
                     conn.Open();//打开链接
                     //写sqlserver语句
@@ -77,7 +77,7 @@ namespace LibraryManage
                 }
                 if (dlflag == 1)
                 {
-                    string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
                     string selectsql = "Select * from loginad where username = '" + username_text.Text + "' and password='" + password_text.Text + "'";
@@ -116,7 +116,7 @@ namespace LibraryManage
                 if (dlflag == 2)
                 {
                     //查找读者 判断是否注册过   与登录代码基本一致
-                    string str2 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str2 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn2 = new SqlConnection(str2);//实例化cnn对象
                     conn2.Open();//打开
                     string selectsql2 = "Select * from login where username = '" + username_text.Text + "'";
@@ -130,7 +130,7 @@ namespace LibraryManage
                     }
                     else
                     {//开始修改                      
-                        string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                        string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                         SqlConnection conn = new SqlConnection(str);
                         conn.Open();
                         //插入操作
@@ -147,7 +147,7 @@ namespace LibraryManage
                 }
                 if (dlflag == 1)  //查找管理员
                 {
-                    string str3 = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                    string str3 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn3 = new SqlConnection(str3);
                     conn3.Open();
                     string selectsql3 = "Select * from loginad where username = '" + username_text.Text + "'";
@@ -161,7 +161,7 @@ namespace LibraryManage
                     }
                     else
                     {
-                        string str = @"Data Source=LAPTOP-VTH29KJQ;Initial catalog=BookDB;integrated Security=True";
+                        string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
                         SqlConnection conn = new SqlConnection(str);
                         conn.Open();
                         string selectsql = "insert into loginad values('" + username_text.Text + "','" + password_text.Text + "')";
