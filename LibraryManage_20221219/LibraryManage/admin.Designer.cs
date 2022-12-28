@@ -32,35 +32,6 @@ namespace LibraryManage
             this.button_lendManage = new System.Windows.Forms.Button();
             this.button_UserManage = new System.Windows.Forms.Button();
             this.button_BookManage = new System.Windows.Forms.Button();
-            this.tushuguanli = new System.Windows.Forms.GroupBox();
-            this.图书夹 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox3_Bnu = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1_id = new System.Windows.Forms.TextBox();
-            this.textBox2_Bname = new System.Windows.Forms.TextBox();
-            this.button_addbook = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button3_alternum = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4_Bnum = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5_id = new System.Windows.Forms.TextBox();
-            this.textBox6_Bname = new System.Windows.Forms.TextBox();
-            this.button2_alterbook = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4_deletebook = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1_deleteBook = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tushuyilan = new System.Windows.Forms.GroupBox();
             this.dataGridView_showbook = new System.Windows.Forms.DataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,12 +89,45 @@ namespace LibraryManage
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.tushuguanli.SuspendLayout();
-            this.图书夹.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).BeginInit();
+            this.图书夹 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView1_deleteBook = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button4_deletebook = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2_alterbook = new System.Windows.Forms.Button();
+            this.textBox6_Bname = new System.Windows.Forms.TextBox();
+            this.textBox5_id = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4_Bnum = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button3_alternum = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button_addbook = new System.Windows.Forms.Button();
+            this.textBox2_Bname = new System.Windows.Forms.TextBox();
+            this.textBox1_id = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3_Bnu = new System.Windows.Forms.TextBox();
+            this.tushuguanli = new System.Windows.Forms.GroupBox();
+            this.textBox1_Bpress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2_Bauthor = new System.Windows.Forms.TextBox();
+            this.button_alterpress = new System.Windows.Forms.Button();
+            this.textBox_Bpress = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox_Bauthor = new System.Windows.Forms.TextBox();
+            this.button_alterauthor = new System.Windows.Forms.Button();
             this.tushuyilan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_showbook)).BeginInit();
             this.jieyueguanli.SuspendLayout();
@@ -134,6 +138,12 @@ namespace LibraryManage
             this.groupBox_Add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage8.SuspendLayout();
+            this.图书夹.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tushuguanli.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_lendManage
@@ -166,320 +176,12 @@ namespace LibraryManage
             this.button_BookManage.UseVisualStyleBackColor = true;
             this.button_BookManage.Click += new System.EventHandler(this.button_BookManage_Click);
             // 
-            // tushuguanli
-            // 
-            this.tushuguanli.Controls.Add(this.图书夹);
-            this.tushuguanli.Location = new System.Drawing.Point(212, 3);
-            this.tushuguanli.Name = "tushuguanli";
-            this.tushuguanli.Size = new System.Drawing.Size(703, 422);
-            this.tushuguanli.TabIndex = 19;
-            this.tushuguanli.TabStop = false;
-            // 
-            // 图书夹
-            // 
-            this.图书夹.Controls.Add(this.tabPage1);
-            this.图书夹.Controls.Add(this.tabPage2);
-            this.图书夹.Controls.Add(this.tabPage3);
-            this.图书夹.Location = new System.Drawing.Point(7, 10);
-            this.图书夹.Margin = new System.Windows.Forms.Padding(4);
-            this.图书夹.Name = "图书夹";
-            this.图书夹.SelectedIndex = 0;
-            this.图书夹.Size = new System.Drawing.Size(689, 405);
-            this.图书夹.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.textBox3_Bnu);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox1_id);
-            this.tabPage1.Controls.Add(this.textBox2_Bname);
-            this.tabPage1.Controls.Add(this.button_addbook);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(681, 376);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "图书入库";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3_Bnu
-            // 
-            this.textBox3_Bnu.Location = new System.Drawing.Point(269, 199);
-            this.textBox3_Bnu.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3_Bnu.Name = "textBox3_Bnu";
-            this.textBox3_Bnu.Size = new System.Drawing.Size(173, 25);
-            this.textBox3_Bnu.TabIndex = 6;
-            this.textBox3_Bnu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 199);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "数量:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(205, 125);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "书名：";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(205, 56);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "书号：";
-            // 
-            // textBox1_id
-            // 
-            this.textBox1_id.Location = new System.Drawing.Point(268, 56);
-            this.textBox1_id.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1_id.Name = "textBox1_id";
-            this.textBox1_id.Size = new System.Drawing.Size(175, 25);
-            this.textBox1_id.TabIndex = 1;
-            this.textBox1_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2_Bname
-            // 
-            this.textBox2_Bname.Location = new System.Drawing.Point(268, 125);
-            this.textBox2_Bname.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2_Bname.Name = "textBox2_Bname";
-            this.textBox2_Bname.Size = new System.Drawing.Size(175, 25);
-            this.textBox2_Bname.TabIndex = 2;
-            this.textBox2_Bname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button_addbook
-            // 
-            this.button_addbook.Location = new System.Drawing.Point(294, 294);
-            this.button_addbook.Margin = new System.Windows.Forms.Padding(4);
-            this.button_addbook.Name = "button_addbook";
-            this.button_addbook.Size = new System.Drawing.Size(100, 29);
-            this.button_addbook.TabIndex = 0;
-            this.button_addbook.Text = "添加图书";
-            this.button_addbook.UseVisualStyleBackColor = true;
-            this.button_addbook.Click += new System.EventHandler(this.button_addbook_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button3_alternum);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.textBox4_Bnum);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.textBox5_id);
-            this.tabPage2.Controls.Add(this.textBox6_Bname);
-            this.tabPage2.Controls.Add(this.button2_alterbook);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(681, 376);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "图书修改";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button3_alternum
-            // 
-            this.button3_alternum.Location = new System.Drawing.Point(387, 281);
-            this.button3_alternum.Margin = new System.Windows.Forms.Padding(4);
-            this.button3_alternum.Name = "button3_alternum";
-            this.button3_alternum.Size = new System.Drawing.Size(100, 29);
-            this.button3_alternum.TabIndex = 15;
-            this.button3_alternum.Text = "修改数量";
-            this.button3_alternum.UseVisualStyleBackColor = true;
-            this.button3_alternum.Click += new System.EventHandler(this.button3_alternum_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 24);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "请输入书号，选择修改项目：";
-            // 
-            // textBox4_Bnum
-            // 
-            this.textBox4_Bnum.Location = new System.Drawing.Point(289, 191);
-            this.textBox4_Bnum.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4_Bnum.Name = "textBox4_Bnum";
-            this.textBox4_Bnum.Size = new System.Drawing.Size(173, 25);
-            this.textBox4_Bnum.TabIndex = 13;
-            this.textBox4_Bnum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(226, 191);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "数量:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(226, 136);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 15);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "书名：";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(226, 84);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 15);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "书号：";
-            // 
-            // textBox5_id
-            // 
-            this.textBox5_id.Location = new System.Drawing.Point(287, 84);
-            this.textBox5_id.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5_id.Name = "textBox5_id";
-            this.textBox5_id.Size = new System.Drawing.Size(175, 25);
-            this.textBox5_id.TabIndex = 8;
-            this.textBox5_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6_Bname
-            // 
-            this.textBox6_Bname.Location = new System.Drawing.Point(289, 136);
-            this.textBox6_Bname.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6_Bname.Name = "textBox6_Bname";
-            this.textBox6_Bname.Size = new System.Drawing.Size(175, 25);
-            this.textBox6_Bname.TabIndex = 9;
-            this.textBox6_Bname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button2_alterbook
-            // 
-            this.button2_alterbook.Location = new System.Drawing.Point(230, 281);
-            this.button2_alterbook.Margin = new System.Windows.Forms.Padding(4);
-            this.button2_alterbook.Name = "button2_alterbook";
-            this.button2_alterbook.Size = new System.Drawing.Size(100, 29);
-            this.button2_alterbook.TabIndex = 7;
-            this.button2_alterbook.Text = "修改书名";
-            this.button2_alterbook.UseVisualStyleBackColor = true;
-            this.button2_alterbook.Click += new System.EventHandler(this.button2_alterbook_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button4_deletebook);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.dataGridView1_deleteBook);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(681, 376);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "删除图书";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button4_deletebook
-            // 
-            this.button4_deletebook.Location = new System.Drawing.Point(271, 321);
-            this.button4_deletebook.Margin = new System.Windows.Forms.Padding(4);
-            this.button4_deletebook.Name = "button4_deletebook";
-            this.button4_deletebook.Size = new System.Drawing.Size(100, 35);
-            this.button4_deletebook.TabIndex = 2;
-            this.button4_deletebook.Text = "删除";
-            this.button4_deletebook.UseVisualStyleBackColor = true;
-            this.button4_deletebook.Click += new System.EventHandler(this.button4_deletebook_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 4);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 15);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "图书信息如下：";
-            // 
-            // dataGridView1_deleteBook
-            // 
-            this.dataGridView1_deleteBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_deleteBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1_deleteBook.Location = new System.Drawing.Point(8, 22);
-            this.dataGridView1_deleteBook.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1_deleteBook.Name = "dataGridView1_deleteBook";
-            this.dataGridView1_deleteBook.RowHeadersWidth = 51;
-            this.dataGridView1_deleteBook.RowTemplate.Height = 23;
-            this.dataGridView1_deleteBook.Size = new System.Drawing.Size(668, 274);
-            this.dataGridView1_deleteBook.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "书号";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "name";
-            this.Column1.HeaderText = "书名";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "number";
-            this.Column2.HeaderText = "数量";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "author";
-            this.Column3.HeaderText = "作者";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "press";
-            this.Column4.HeaderText = "出版社";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
             // tushuyilan
             // 
             this.tushuyilan.Controls.Add(this.dataGridView_showbook);
-            this.tushuyilan.Location = new System.Drawing.Point(212, 3);
+            this.tushuyilan.Location = new System.Drawing.Point(212, 2);
             this.tushuyilan.Name = "tushuyilan";
-            this.tushuyilan.Size = new System.Drawing.Size(703, 422);
+            this.tushuyilan.Size = new System.Drawing.Size(703, 425);
             this.tushuyilan.TabIndex = 20;
             this.tushuyilan.TabStop = false;
             // 
@@ -492,11 +194,11 @@ namespace LibraryManage
             this.Column12,
             this.Column5,
             this.Column6});
-            this.dataGridView_showbook.Location = new System.Drawing.Point(11, 14);
+            this.dataGridView_showbook.Location = new System.Drawing.Point(6, 21);
             this.dataGridView_showbook.Name = "dataGridView_showbook";
             this.dataGridView_showbook.RowHeadersWidth = 51;
             this.dataGridView_showbook.RowTemplate.Height = 27;
-            this.dataGridView_showbook.Size = new System.Drawing.Size(685, 397);
+            this.dataGridView_showbook.Size = new System.Drawing.Size(692, 397);
             this.dataGridView_showbook.TabIndex = 0;
             // 
             // Column10
@@ -560,9 +262,9 @@ namespace LibraryManage
             this.jieyueguanli.Controls.Add(this.select_retern);
             this.jieyueguanli.Controls.Add(this.textBox6);
             this.jieyueguanli.Controls.Add(this.dataGridView3);
-            this.jieyueguanli.Location = new System.Drawing.Point(212, 12);
+            this.jieyueguanli.Location = new System.Drawing.Point(212, 6);
             this.jieyueguanli.Name = "jieyueguanli";
-            this.jieyueguanli.Size = new System.Drawing.Size(722, 413);
+            this.jieyueguanli.Size = new System.Drawing.Size(725, 415);
             this.jieyueguanli.TabIndex = 21;
             this.jieyueguanli.TabStop = false;
             // 
@@ -681,9 +383,9 @@ namespace LibraryManage
             // duzheguanli
             // 
             this.duzheguanli.Controls.Add(this.tabControl2);
-            this.duzheguanli.Location = new System.Drawing.Point(212, 3);
+            this.duzheguanli.Location = new System.Drawing.Point(212, 6);
             this.duzheguanli.Name = "duzheguanli";
-            this.duzheguanli.Size = new System.Drawing.Size(751, 440);
+            this.duzheguanli.Size = new System.Drawing.Size(745, 443);
             this.duzheguanli.TabIndex = 22;
             this.duzheguanli.TabStop = false;
             // 
@@ -691,10 +393,10 @@ namespace LibraryManage
             // 
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Location = new System.Drawing.Point(6, 14);
+            this.tabControl2.Location = new System.Drawing.Point(6, 17);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(739, 410);
+            this.tabControl2.Size = new System.Drawing.Size(733, 426);
             this.tabControl2.TabIndex = 1;
             // 
             // tabPage7
@@ -708,7 +410,7 @@ namespace LibraryManage
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(731, 381);
+            this.tabPage7.Size = new System.Drawing.Size(725, 397);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "读者信息";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -831,7 +533,7 @@ namespace LibraryManage
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 325);
+            this.dataGridView1.Size = new System.Drawing.Size(719, 341);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn8
@@ -1034,17 +736,433 @@ namespace LibraryManage
             this.label18.TabIndex = 0;
             this.label18.Text = "用户名*：";
             // 
+            // 图书夹
+            // 
+            this.图书夹.Controls.Add(this.tabPage1);
+            this.图书夹.Controls.Add(this.tabPage2);
+            this.图书夹.Controls.Add(this.tabPage3);
+            this.图书夹.Location = new System.Drawing.Point(6, 16);
+            this.图书夹.Margin = new System.Windows.Forms.Padding(4);
+            this.图书夹.Name = "图书夹";
+            this.图书夹.SelectedIndex = 0;
+            this.图书夹.Size = new System.Drawing.Size(712, 401);
+            this.图书夹.TabIndex = 4;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button4_deletebook);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.dataGridView1_deleteBook);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(711, 384);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "删除图书";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1_deleteBook
+            // 
+            this.dataGridView1_deleteBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_deleteBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView1_deleteBook.Location = new System.Drawing.Point(8, 22);
+            this.dataGridView1_deleteBook.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1_deleteBook.Name = "dataGridView1_deleteBook";
+            this.dataGridView1_deleteBook.RowHeadersWidth = 51;
+            this.dataGridView1_deleteBook.RowTemplate.Height = 23;
+            this.dataGridView1_deleteBook.Size = new System.Drawing.Size(695, 291);
+            this.dataGridView1_deleteBook.TabIndex = 0;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "press";
+            this.Column4.HeaderText = "出版社";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "author";
+            this.Column3.HeaderText = "作者";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "number";
+            this.Column2.HeaderText = "数量";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "name";
+            this.Column1.HeaderText = "书名";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "书号";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 4);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "图书信息如下：";
+            // 
+            // button4_deletebook
+            // 
+            this.button4_deletebook.Location = new System.Drawing.Point(282, 336);
+            this.button4_deletebook.Margin = new System.Windows.Forms.Padding(4);
+            this.button4_deletebook.Name = "button4_deletebook";
+            this.button4_deletebook.Size = new System.Drawing.Size(100, 35);
+            this.button4_deletebook.TabIndex = 2;
+            this.button4_deletebook.Text = "删除";
+            this.button4_deletebook.UseVisualStyleBackColor = true;
+            this.button4_deletebook.Click += new System.EventHandler(this.button4_deletebook_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button_alterpress);
+            this.tabPage2.Controls.Add(this.textBox_Bpress);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.textBox_Bauthor);
+            this.tabPage2.Controls.Add(this.button_alterauthor);
+            this.tabPage2.Controls.Add(this.button3_alternum);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.textBox4_Bnum);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.textBox5_id);
+            this.tabPage2.Controls.Add(this.textBox6_Bname);
+            this.tabPage2.Controls.Add(this.button2_alterbook);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(711, 384);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "图书修改";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2_alterbook
+            // 
+            this.button2_alterbook.Location = new System.Drawing.Point(452, 131);
+            this.button2_alterbook.Margin = new System.Windows.Forms.Padding(4);
+            this.button2_alterbook.Name = "button2_alterbook";
+            this.button2_alterbook.Size = new System.Drawing.Size(100, 29);
+            this.button2_alterbook.TabIndex = 7;
+            this.button2_alterbook.Text = "修改";
+            this.button2_alterbook.UseVisualStyleBackColor = true;
+            this.button2_alterbook.Click += new System.EventHandler(this.button2_alterbook_Click);
+            // 
+            // textBox6_Bname
+            // 
+            this.textBox6_Bname.Location = new System.Drawing.Point(223, 131);
+            this.textBox6_Bname.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6_Bname.Name = "textBox6_Bname";
+            this.textBox6_Bname.Size = new System.Drawing.Size(175, 25);
+            this.textBox6_Bname.TabIndex = 9;
+            this.textBox6_Bname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5_id
+            // 
+            this.textBox5_id.Location = new System.Drawing.Point(221, 79);
+            this.textBox5_id.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5_id.Name = "textBox5_id";
+            this.textBox5_id.Size = new System.Drawing.Size(175, 25);
+            this.textBox5_id.TabIndex = 8;
+            this.textBox5_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(160, 79);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 15);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "书号：";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(160, 131);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 15);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "书名：";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(160, 189);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 15);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "数量:";
+            // 
+            // textBox4_Bnum
+            // 
+            this.textBox4_Bnum.Location = new System.Drawing.Point(223, 189);
+            this.textBox4_Bnum.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4_Bnum.Name = "textBox4_Bnum";
+            this.textBox4_Bnum.Size = new System.Drawing.Size(173, 25);
+            this.textBox4_Bnum.TabIndex = 13;
+            this.textBox4_Bnum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 24);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(202, 15);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "请输入书号，选择修改项目：";
+            // 
+            // button3_alternum
+            // 
+            this.button3_alternum.Location = new System.Drawing.Point(452, 185);
+            this.button3_alternum.Margin = new System.Windows.Forms.Padding(4);
+            this.button3_alternum.Name = "button3_alternum";
+            this.button3_alternum.Size = new System.Drawing.Size(100, 29);
+            this.button3_alternum.TabIndex = 15;
+            this.button3_alternum.Text = "修改";
+            this.button3_alternum.UseVisualStyleBackColor = true;
+            this.button3_alternum.Click += new System.EventHandler(this.button3_alternum_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.textBox1_Bpress);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.textBox2_Bauthor);
+            this.tabPage1.Controls.Add(this.textBox3_Bnu);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.textBox1_id);
+            this.tabPage1.Controls.Add(this.textBox2_Bname);
+            this.tabPage1.Controls.Add(this.button_addbook);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(704, 372);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "图书入库";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button_addbook
+            // 
+            this.button_addbook.Location = new System.Drawing.Point(294, 294);
+            this.button_addbook.Margin = new System.Windows.Forms.Padding(4);
+            this.button_addbook.Name = "button_addbook";
+            this.button_addbook.Size = new System.Drawing.Size(100, 29);
+            this.button_addbook.TabIndex = 0;
+            this.button_addbook.Text = "添加图书";
+            this.button_addbook.UseVisualStyleBackColor = true;
+            this.button_addbook.Click += new System.EventHandler(this.button_addbook_Click);
+            // 
+            // textBox2_Bname
+            // 
+            this.textBox2_Bname.Location = new System.Drawing.Point(118, 124);
+            this.textBox2_Bname.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2_Bname.Name = "textBox2_Bname";
+            this.textBox2_Bname.Size = new System.Drawing.Size(175, 25);
+            this.textBox2_Bname.TabIndex = 2;
+            this.textBox2_Bname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_id
+            // 
+            this.textBox1_id.Location = new System.Drawing.Point(118, 55);
+            this.textBox1_id.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1_id.Name = "textBox1_id";
+            this.textBox1_id.Size = new System.Drawing.Size(175, 25);
+            this.textBox1_id.TabIndex = 1;
+            this.textBox1_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(55, 55);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 15);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "书号：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(55, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "书名：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 198);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "数量:";
+            // 
+            // textBox3_Bnu
+            // 
+            this.textBox3_Bnu.Location = new System.Drawing.Point(119, 198);
+            this.textBox3_Bnu.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3_Bnu.Name = "textBox3_Bnu";
+            this.textBox3_Bnu.Size = new System.Drawing.Size(173, 25);
+            this.textBox3_Bnu.TabIndex = 6;
+            this.textBox3_Bnu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tushuguanli
+            // 
+            this.tushuguanli.Controls.Add(this.图书夹);
+            this.tushuguanli.Location = new System.Drawing.Point(212, 4);
+            this.tushuguanli.Name = "tushuguanli";
+            this.tushuguanli.Size = new System.Drawing.Size(725, 423);
+            this.tushuguanli.TabIndex = 19;
+            this.tushuguanli.TabStop = false;
+            // 
+            // textBox1_Bpress
+            // 
+            this.textBox1_Bpress.Location = new System.Drawing.Point(448, 130);
+            this.textBox1_Bpress.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1_Bpress.Name = "textBox1_Bpress";
+            this.textBox1_Bpress.Size = new System.Drawing.Size(173, 25);
+            this.textBox1_Bpress.TabIndex = 10;
+            this.textBox1_Bpress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(384, 130);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "出版社:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(384, 56);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "作者：";
+            // 
+            // textBox2_Bauthor
+            // 
+            this.textBox2_Bauthor.Location = new System.Drawing.Point(447, 56);
+            this.textBox2_Bauthor.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2_Bauthor.Name = "textBox2_Bauthor";
+            this.textBox2_Bauthor.Size = new System.Drawing.Size(175, 25);
+            this.textBox2_Bauthor.TabIndex = 7;
+            this.textBox2_Bauthor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button_alterpress
+            // 
+            this.button_alterpress.Location = new System.Drawing.Point(452, 307);
+            this.button_alterpress.Margin = new System.Windows.Forms.Padding(4);
+            this.button_alterpress.Name = "button_alterpress";
+            this.button_alterpress.Size = new System.Drawing.Size(100, 29);
+            this.button_alterpress.TabIndex = 21;
+            this.button_alterpress.Text = "修改";
+            this.button_alterpress.UseVisualStyleBackColor = true;
+            this.button_alterpress.Click += new System.EventHandler(this.button_alterpress_Click);
+            // 
+            // textBox_Bpress
+            // 
+            this.textBox_Bpress.Location = new System.Drawing.Point(223, 311);
+            this.textBox_Bpress.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Bpress.Name = "textBox_Bpress";
+            this.textBox_Bpress.Size = new System.Drawing.Size(173, 25);
+            this.textBox_Bpress.TabIndex = 20;
+            this.textBox_Bpress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(160, 311);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "出版社:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(160, 249);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 15);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "作者：";
+            // 
+            // textBox_Bauthor
+            // 
+            this.textBox_Bauthor.Location = new System.Drawing.Point(223, 249);
+            this.textBox_Bauthor.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Bauthor.Name = "textBox_Bauthor";
+            this.textBox_Bauthor.Size = new System.Drawing.Size(175, 25);
+            this.textBox_Bauthor.TabIndex = 17;
+            this.textBox_Bauthor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button_alterauthor
+            // 
+            this.button_alterauthor.Location = new System.Drawing.Point(452, 249);
+            this.button_alterauthor.Margin = new System.Windows.Forms.Padding(4);
+            this.button_alterauthor.Name = "button_alterauthor";
+            this.button_alterauthor.Size = new System.Drawing.Size(100, 29);
+            this.button_alterauthor.TabIndex = 16;
+            this.button_alterauthor.Text = "修改";
+            this.button_alterauthor.UseVisualStyleBackColor = true;
+            this.button_alterauthor.Click += new System.EventHandler(this.button_alterauthor_Click);
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(960, 435);
+            this.ClientSize = new System.Drawing.Size(952, 450);
             this.Controls.Add(this.duzheguanli);
+            this.Controls.Add(this.tushuguanli);
             this.Controls.Add(this.jieyueguanli);
             this.Controls.Add(this.tushuyilan);
             this.Controls.Add(this.button_Show);
-            this.Controls.Add(this.tushuguanli);
             this.Controls.Add(this.button_BookManage);
             this.Controls.Add(this.button_UserManage);
             this.Controls.Add(this.button_lendManage);
@@ -1053,15 +1171,6 @@ namespace LibraryManage
             this.Name = "admin";
             this.Text = "图书管理系统-管理员界面";
             this.Load += new System.EventHandler(this.admin_Load);
-            this.tushuguanli.ResumeLayout(false);
-            this.图书夹.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).EndInit();
             this.tushuyilan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_showbook)).EndInit();
             this.jieyueguanli.ResumeLayout(false);
@@ -1076,6 +1185,15 @@ namespace LibraryManage
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.图书夹.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_deleteBook)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tushuguanli.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1084,35 +1202,6 @@ namespace LibraryManage
         private System.Windows.Forms.Button button_lendManage;
         private System.Windows.Forms.Button button_UserManage;
         private System.Windows.Forms.Button button_BookManage;
-        private System.Windows.Forms.GroupBox tushuguanli;
-        private System.Windows.Forms.TabControl 图书夹;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox3_Bnu;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1_id;
-        private System.Windows.Forms.TextBox textBox2_Bname;
-        private System.Windows.Forms.Button button_addbook;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button3_alternum;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4_Bnum;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5_id;
-        private System.Windows.Forms.TextBox textBox6_Bname;
-        private System.Windows.Forms.Button button2_alterbook;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button4_deletebook;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1_deleteBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox tushuyilan;
         private System.Windows.Forms.DataGridView dataGridView_showbook;
         private System.Windows.Forms.Button button_Show;
@@ -1170,5 +1259,44 @@ namespace LibraryManage
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.TabControl 图书夹;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox textBox3_Bnu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1_id;
+        private System.Windows.Forms.TextBox textBox2_Bname;
+        private System.Windows.Forms.Button button_addbook;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button3_alternum;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox4_Bnum;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox5_id;
+        private System.Windows.Forms.TextBox textBox6_Bname;
+        private System.Windows.Forms.Button button2_alterbook;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button4_deletebook;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView1_deleteBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.GroupBox tushuguanli;
+        private System.Windows.Forms.TextBox textBox1_Bpress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2_Bauthor;
+        private System.Windows.Forms.Button button_alterpress;
+        private System.Windows.Forms.TextBox textBox_Bpress;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox_Bauthor;
+        private System.Windows.Forms.Button button_alterauthor;
     }
 }

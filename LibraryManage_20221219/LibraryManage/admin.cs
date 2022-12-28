@@ -19,7 +19,7 @@ namespace LibraryManage
         }
         private void admin_Load(object sender, EventArgs e)
         {
-            string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1 = new SqlConnection(str1);
             conn1.Open();
             SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
@@ -39,7 +39,7 @@ namespace LibraryManage
         //添加图书
         private void button_addbook_Click(object sender, EventArgs e)
         {
-            string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1 = new SqlConnection(str1);
             conn1.Open();
             string selectsql1 = "Select * from book where id = '" + textBox1_id.Text + "'";
@@ -53,10 +53,10 @@ namespace LibraryManage
             }
             else
             {
-                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
-                string selectsql = "insert into book (id,name,number) values('" + textBox1_id.Text + "','" + textBox2_Bname.Text + "','" + textBox3_Bnu.Text + "')";
+                string selectsql = "insert into book (id,name,number,author,press) values('" + textBox1_id.Text + "','" + textBox2_Bname.Text + "','" + textBox3_Bnu.Text + "','" + textBox2_Bauthor.Text + "','" + textBox1_Bpress.Text + "')";
                 SqlCommand cmd = new SqlCommand(selectsql, conn);
                 cmd.CommandType = CommandType.Text;
                 SqlDataReader sdr;
@@ -65,7 +65,7 @@ namespace LibraryManage
                 MessageBox.Show("添加成功！", "添加图书", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 
                 //刷新
-                string str12 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str12 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn12 = new SqlConnection(str12);
                 conn12.Open();
                 SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn12);
@@ -84,7 +84,7 @@ namespace LibraryManage
         {
             if (textBox5_id.Text != "" && textBox6_Bname.Text != "")
             {
-                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 string selectsql = "update book set name = '" + textBox6_Bname.Text + "' where id = '" + textBox5_id.Text + "'";
@@ -97,7 +97,7 @@ namespace LibraryManage
                 MessageBox.Show("修改书名成功", "修改书名", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                
                 //刷新数据库中的图书信息
-                string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn1 = new SqlConnection(str1);
                 conn1.Open();
                 SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
@@ -117,7 +117,7 @@ namespace LibraryManage
         {
             if(textBox5_id.Text !="" && textBox4_Bnum.Text != "")
             {
-                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 string selectsql = "update book set number = " + textBox4_Bnum.Text + " where id = '" + textBox5_id.Text + "'";
@@ -129,7 +129,7 @@ namespace LibraryManage
                 MessageBox.Show("修改数量成功", "修改数量", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 
                 //刷新数据库中的图书信息
-                string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn1 = new SqlConnection(str1);
                 conn1.Open();
                 SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
@@ -143,11 +143,72 @@ namespace LibraryManage
             else MessageBox.Show("图书id或者数量为空！");
 
         }
+        //修改作者
+        private void button_alterauthor_Click(object sender, EventArgs e)
+        {
+            if (textBox5_id.Text != "" && textBox_Bauthor.Text != "")
+            {
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string selectsql = "update book set author = '" + textBox_Bauthor.Text + "' where id = '" + textBox5_id.Text + "'";
+                SqlCommand cmd = new SqlCommand(selectsql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader sdr;
+                sdr = cmd.ExecuteReader();
+                conn.Close();
+                //显示修改成功窗体
+                MessageBox.Show("修改作者成功", "修改作者", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+                //刷新数据库中的图书信息
+                string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
+                SqlConnection conn1 = new SqlConnection(str1);
+                conn1.Open();
+                SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
+                DataSet dds1 = new DataSet();
+                sqlDap.Fill(dds1);
+                DataTable _table1 = dds1.Tables[0];
+                int count1 = _table1.Rows.Count;
+                dataGridView1_deleteBook.DataSource = _table1;
+                conn.Close();
+            }
+            else MessageBox.Show("图书id或者作者为空！");
+        }
+        //修改出版社
+        private void button_alterpress_Click(object sender, EventArgs e)
+        {
+            if (textBox5_id.Text != "" && textBox_Bpress.Text != "")
+            {
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
+                SqlConnection conn = new SqlConnection(str);
+                conn.Open();
+                string selectsql = "update book set press = '" + textBox_Bpress.Text + "' where id = '" + textBox5_id.Text + "'";
+                SqlCommand cmd = new SqlCommand(selectsql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader sdr;
+                sdr = cmd.ExecuteReader();
+                conn.Close();
+                //显示修改成功窗体
+                MessageBox.Show("修改出版社成功", "修改出版社", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                //刷新数据库中的图书信息
+                string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
+                SqlConnection conn1 = new SqlConnection(str1);
+                conn1.Open();
+                SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
+                DataSet dds1 = new DataSet();
+                sqlDap.Fill(dds1);
+                DataTable _table1 = dds1.Tables[0];
+                int count1 = _table1.Rows.Count;
+                dataGridView1_deleteBook.DataSource = _table1;
+                conn.Close();
+            }
+            else MessageBox.Show("图书id或者出版社为空！");
+        }
         //删除图书
         private void button4_deletebook_Click(object sender, EventArgs e)
         {
-            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
             if (dataGridView1_deleteBook.SelectedRows.Count != 1) return;
@@ -172,7 +233,7 @@ namespace LibraryManage
             }
             conn.Close();
             //重新加载图书信息
-            string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1 = new SqlConnection(str1);
             conn1.Open();
 
@@ -195,7 +256,7 @@ namespace LibraryManage
             duzheguanli.Visible = false;
 
             //加载图书删除界面信息
-            string str11 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str11 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn11 = new SqlConnection(str11);
             conn11.Open();
             SqlDataAdapter sqlDap11 = new SqlDataAdapter("Select * from book order by id", conn11);
@@ -217,7 +278,7 @@ namespace LibraryManage
             duzheguanli.Visible = false;
 
             //加载图书信息
-            string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1 = new SqlConnection(str1);
             conn1.Open();
             SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from book order by id", conn1);
@@ -233,7 +294,7 @@ namespace LibraryManage
         //还书查询
         private void select_retern_Click(object sender, EventArgs e)
         {
-            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
             //模糊查询
@@ -248,7 +309,7 @@ namespace LibraryManage
         //借书查询
         private void select_borrow_Click(object sender, EventArgs e)
         {
-            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
             //模糊查询
@@ -269,7 +330,7 @@ namespace LibraryManage
             duzheguanli.Visible = false;
         }
 
-        /*——————————————读者管理—————————————————*/
+        /*——————————————读者管理:用户查询、添加、修改—————————————————*/
         private void button_Add_Click(object sender, EventArgs e)
         {
             groupBox_Add.Visible = true;
@@ -277,7 +338,7 @@ namespace LibraryManage
         //按用户名查询
         private void button5_select_Click(object sender, EventArgs e)
         {
-            string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
 
@@ -297,7 +358,7 @@ namespace LibraryManage
         //添加用户
         private void Add_Click(object sender, EventArgs e)
         {
-            string str454 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str454 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn454 = new SqlConnection(str454);//实例化cnn对象
             conn454.Open();//打开
             string selectsql454 = "Select * from login where username = '" + textBox11.Text + "'";
@@ -311,7 +372,7 @@ namespace LibraryManage
             }
             else
             {//开始修改                      
-                string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
                 string selectsql = "insert into login values('" + textBox11.Text + "','" + textBox22.Text + "',0,'null',0)";
@@ -322,7 +383,7 @@ namespace LibraryManage
                 MessageBox.Show("添加用户成功!");
                 conn.Close();
 
-                string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                 SqlConnection conn1 = new SqlConnection(str1);
                 conn1.Open();
                 SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -340,7 +401,7 @@ namespace LibraryManage
         //修改用户密码
         private void alter_pssword_Click(object sender, EventArgs e)
         {
-            string str454 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str454 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn454 = new SqlConnection(str454);
             conn454.Open();
             string selectsql454 = "Select * from login where username = '" + textBox1_username.Text + "'";
@@ -353,7 +414,7 @@ namespace LibraryManage
                 if (textBox1_username.Text != "")
                 {
                     //如果用户名存在且不为空，开始修改
-                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
                     string selectsql = "update login set password = '" + textBox2_password.Text + "'  where username = '" + textBox1_username.Text + "'";
@@ -365,7 +426,7 @@ namespace LibraryManage
                     conn.Close();
                     MessageBox.Show("修改密码成功", "修改密码", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     //刷新读者信息
-                    string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
                     SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -385,7 +446,7 @@ namespace LibraryManage
         //修改性别
         private void alter_sex_Click(object sender, EventArgs e)
         {
-            string str454 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str454 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn454 = new SqlConnection(str454);
             conn454.Open();
             string selectsql454 = "Select * from login where username = '" + textBox1_username.Text + "'";
@@ -397,7 +458,7 @@ namespace LibraryManage
             {   //如果用户名存在且不为空，开始修改
                 if (textBox1_username.Text != "")
                 {
-                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
                     string selectsql = "update login set sex = '" + textBox3_sex.Text + "'  where username = '" + textBox1_username.Text + "'";
@@ -409,7 +470,7 @@ namespace LibraryManage
                     conn.Close();
                     MessageBox.Show("修改性别成功", "修改性别", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     //刷新读者信息
-                    string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
                     SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -429,7 +490,7 @@ namespace LibraryManage
         private void alter_age_Click(object sender, EventArgs e)
         {
             //查找读者
-            string str454 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str454 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn454 = new SqlConnection(str454);
             conn454.Open();
             string selectsql454 = "Select * from login where username = '" + textBox1_username.Text + "'";
@@ -442,7 +503,7 @@ namespace LibraryManage
             {    //如果用户名存在且不为空，开始修改
                 if (textBox1_username.Text != "")
                 {
-                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
                     string selectsql = "update login set age = '" + textBox4_age.Text + "'  where username = '" + textBox1_username.Text + "'";
@@ -454,7 +515,7 @@ namespace LibraryManage
                     conn.Close();
                     MessageBox.Show("修改年龄成功", "修改年龄", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     //刷新读者信息
-                    string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
                     SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -474,7 +535,7 @@ namespace LibraryManage
         private void alter_email_Click(object sender, EventArgs e)
         {
             //查找读者
-            string str454 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str454 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn454 = new SqlConnection(str454);
             conn454.Open();
             string selectsql454 = "Select * from login where username = '" + textBox1_username.Text + "'";
@@ -486,7 +547,7 @@ namespace LibraryManage
             {   //如果用户名存在且不为空，开始修改
                 if (textBox1_username.Text != "")
                 {
-                    string str = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn = new SqlConnection(str);
                     conn.Open();
                     string selectsql = "update login set Email = '" + textBox5_Email.Text + "'  where username = '" + textBox1_username.Text + "'";
@@ -497,7 +558,7 @@ namespace LibraryManage
                     conn.Close();
                     MessageBox.Show("修改Email成功", "修改Email", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     //刷新读者信息
-                    string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+                    string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
                     SqlConnection conn1 = new SqlConnection(str1);
                     conn1.Open();
                     SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -520,7 +581,7 @@ namespace LibraryManage
             tushuguanli.Visible = false;
             jieyueguanli.Visible = false;
             duzheguanli.Visible = true;
-            string str1 = @"Data Source=LAPTOP-HKE14BIG;Initial catalog=BookDB;integrated Security=True";
+            string str1 = @"Data Source=.;Initial catalog=BookDB;integrated Security=True";
             SqlConnection conn1 = new SqlConnection(str1);
             conn1.Open();
             SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login order by username", conn1);
@@ -531,5 +592,7 @@ namespace LibraryManage
             dataGridView1.DataSource = _table1;
             conn1.Close();
         }
+
+
     }
 }
