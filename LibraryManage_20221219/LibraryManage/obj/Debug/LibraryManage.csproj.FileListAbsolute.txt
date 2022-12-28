@@ -35,3 +35,15 @@ D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryMa
 D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
 D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.exe
 D:\86137\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.pdb
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe.config
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.pdb
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.AssemblyReference.cache
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.admin.resources
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.login.resources
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.Properties.Resources.resources
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.user.resources
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.GenerateResource.cache
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.exe
+D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.pdb
