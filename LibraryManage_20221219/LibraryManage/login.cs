@@ -16,7 +16,7 @@ namespace LibraryManage
         public login()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"D:\86137\Library-System\LibraryManage_20221219\安徽财经大学图书馆背景照.jpg");//文件路径
+            this.BackgroundImage = Image.FromFile(@"C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\安徽财经大学图书馆背景照.jpg");//文件路径
             this.BackgroundImageLayout = ImageLayout.Stretch;//图片自动延展
         }
 

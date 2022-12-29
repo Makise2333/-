@@ -342,7 +342,7 @@ namespace LibraryManage
             SqlConnection conn = new SqlConnection(str);
             conn.Open();
 
-            SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login where username like '%" + textBox11_usename.Text + "%'order by username", conn);
+            SqlDataAdapter sqlDap = new SqlDataAdapter("Select * from login where username like '%" + textBox11_username.Text + "%'order by username", conn);
             DataSet dds = new DataSet();
             sqlDap.Fill(dds);
             DataTable _table = dds.Tables[0];

@@ -47,3 +47,16 @@ D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryM
 D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
 D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.exe
 D:\github\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.pdb
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe.config
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.exe
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\bin\Debug\LibraryManage.pdb
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.admin.resources
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.login.resources
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.user.resources
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.exe
+C:\Users\LENOVO\Desktop\1\Library-System\LibraryManage_20221219\LibraryManage\obj\Debug\LibraryManage.pdb

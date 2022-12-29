@@ -65,7 +65,7 @@ namespace LibraryManage
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button_Add = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox11_usename = new System.Windows.Forms.TextBox();
+            this.textBox11_username = new System.Windows.Forms.TextBox();
             this.button5_select = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -404,7 +404,7 @@ namespace LibraryManage
             this.tabPage7.Controls.Add(this.groupBox_Add);
             this.tabPage7.Controls.Add(this.button_Add);
             this.tabPage7.Controls.Add(this.label12);
-            this.tabPage7.Controls.Add(this.textBox11_usename);
+            this.tabPage7.Controls.Add(this.textBox11_username);
             this.tabPage7.Controls.Add(this.button5_select);
             this.tabPage7.Controls.Add(this.dataGridView1);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
@@ -504,11 +504,11 @@ namespace LibraryManage
             // 
             // textBox11_usename
             // 
-            this.textBox11_usename.Location = new System.Drawing.Point(109, 15);
-            this.textBox11_usename.Name = "textBox11_usename";
-            this.textBox11_usename.Size = new System.Drawing.Size(181, 25);
-            this.textBox11_usename.TabIndex = 7;
-            this.textBox11_usename.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11_username.Location = new System.Drawing.Point(109, 15);
+            this.textBox11_username.Name = "textBox11_usename";
+            this.textBox11_username.Size = new System.Drawing.Size(181, 25);
+            this.textBox11_username.TabIndex = 7;
+            this.textBox11_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button5_select
             // 
@@ -1235,7 +1235,7 @@ namespace LibraryManage
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11_usename;
+        private System.Windows.Forms.TextBox textBox11_username;
         private System.Windows.Forms.Button button5_select;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage8;
